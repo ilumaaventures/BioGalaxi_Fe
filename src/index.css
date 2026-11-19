@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Carnas Light';
+  src: url('/fonts/Carnas-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-carnas {
+  font-family: 'Carnas Light', 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-obsidian-950: #040E1E;
+  --color-navy-950: #061838;
+  --color-navy-900: #0A2A5E;
+  --color-navy-800: #0D326E;
+  --color-navy-700: #123B7A;
+  --color-navy-600: #1A4D9B;
+  --color-blue-600: #2566C8;
+  --color-blue-500: #2F7BEA;
+  --color-blue-400: #5D99F0;
+  --color-blue-300: #8DB8F5;
+  --color-blue-200: #B7D3FA;
+  --color-blue-100: #E3EFFE;
+  --color-blue-50: #F4F9FF;
+  --color-teal-500: #1AA6A6;
+  --color-teal-400: #22BDBD;
+  --color-teal-300: #4FE1E1;
+  --color-teal-50: #EBFBFA;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #475569;
+  background-color: #F4F9FF;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F9FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #B7D3FA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8DB8F5;
+}
+
+/* Glassmorphism helpers */
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(47, 123, 234, 0.14);
+  box-shadow: 0 10px 30px rgba(10, 42, 94, 0.06);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 123, 234, 0.35);
+  box-shadow: 0 20px 40px rgba(10, 42, 94, 0.12);
+}
+
+.subtle-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(47, 123, 234, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(47, 123, 234, 0.04) 1px, transparent 1px);
+}
+
+.dotted-bg {
+  background-image: radial-gradient(rgba(47, 123, 234, 0.18) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Luminous telemetry and glow styles */
+.glow-teal-sm {
+  box-shadow: 0 0 20px rgba(26, 166, 166, 0.25);
+}
+.glow-blue-sm {
+  box-shadow: 0 0 24px rgba(47, 123, 234, 0.22);
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
