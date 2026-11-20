@@ -30,7 +30,7 @@ export default function StatsCounters() {
   ];
 
   return (
-    <section className="py-16 bg-[#033E6B] text-white relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-[#1B062E] via-[#3B1366] to-[#581C87] text-white relative overflow-hidden">
       <div className="absolute inset-0 subtle-grid-bg opacity-15 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -39,10 +39,10 @@ export default function StatsCounters() {
             const Icon = st.icon;
             return (
               <div key={i} className="flex flex-col items-center text-center p-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#B9D057] mb-3">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#10B981] mb-3">
                   <Icon size={22} strokeWidth={2} />
                 </div>
-                <span className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#B9D057] tracking-tight mb-1">
+                <span className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#10B981] tracking-tight mb-1">
                   {st.value}
                 </span>
                 <h4 className="text-sm font-bold text-white mb-0.5">

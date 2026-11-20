@@ -53,17 +53,17 @@ export default function Testimonials() {
       id="testimonials"
       className="relative w-full bg-white overflow-hidden py-10 lg:py-14"
     >
-      {/* Light Blue Background Bleed
+      {/* Soft Lavender Background Bleed
           - On Desktop: Begins at 36px from section top
           - Covers left edge of screen to 61% of viewport width
           - Ends 56px lower than photo bottom, forming the signature ledge under photo */}
-      <div className="absolute hidden lg:block left-0 top-[36px] w-[61%] h-[385px] bg-[#F1F6FB] z-0" />
+      <div className="absolute hidden lg:block left-0 top-[36px] w-[61%] h-[385px] bg-[#F8F6FD] z-0" />
 
       {/* Main Grid Container aligned with site width (1200px) */}
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Mobile View: Clean Stacked Layout */}
-        <div className="lg:hidden w-full bg-[#F1F6FB] overflow-hidden">
+        <div className="lg:hidden w-full bg-[#F8F6FD] overflow-hidden">
           <div className="w-full h-[240px] sm:h-[300px]">
             <img
               src={testimonialTeamHd}
@@ -73,14 +73,14 @@ export default function Testimonials() {
             />
           </div>
           <div className="p-7 sm:p-9">
-            <div className="text-[#7FB3CB] text-4xl font-serif leading-none mb-3 select-none">
+            <div className="text-[#10B981] text-4xl font-serif leading-none mb-3 select-none">
               &ldquo;
             </div>
             <p className="text-[16px] sm:text-[17px] font-sans text-[#222222] font-normal leading-[1.45] mb-4">
               {current.quote}
             </p>
             <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 mb-5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#0077A9]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#6D28D9]">
                 {current.author}
               </span>
               <span className="text-[11px] text-[#666666]">
@@ -94,7 +94,7 @@ export default function Testimonials() {
                   type="button"
                   onClick={() => changeSlide(i)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    currentIdx === i ? 'w-5 bg-[#0077A9]' : 'w-2 bg-slate-300'
+                    currentIdx === i ? 'w-5 bg-[#10B981]' : 'w-2 bg-slate-300'
                   }`}
                   aria-label={`Go to slide ${i + 1}`}
                 />
@@ -110,7 +110,7 @@ export default function Testimonials() {
           <div className="w-[380px] xl:w-[410px] pt-14 pb-8 flex flex-col justify-between h-[375px]">
             <div>
               {/* Quotation Mark */}
-              <div className="text-[#7FB3CB] text-4xl xl:text-5xl font-serif leading-none mb-3 select-none">
+              <div className="text-[#10B981] text-4xl xl:text-5xl font-serif leading-none mb-3 select-none">
                 &ldquo;
               </div>
 
@@ -129,7 +129,7 @@ export default function Testimonials() {
                   isFading ? 'opacity-40' : 'opacity-100'
                 }`}
               >
-                <span className="text-[12px] font-bold uppercase tracking-[0.06em] text-[#0077A9]">
+                <span className="text-[12px] font-bold uppercase tracking-[0.06em] text-[#6D28D9]">
                   {current.author}
                 </span>
                 <span className="text-[12px] text-[#666666]">
@@ -146,7 +146,7 @@ export default function Testimonials() {
                   type="button"
                   onClick={() => changeSlide(i)}
                   className={`h-1.5 rounded-full cursor-pointer transition-all duration-300 ${
-                    currentIdx === i ? 'w-5 bg-[#0077A9]' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                    currentIdx === i ? 'w-5 bg-[#10B981]' : 'w-2 bg-slate-300 hover:bg-slate-400'
                   }`}
                   aria-label={`Go to slide ${i + 1}`}
                 />

@@ -6,10 +6,10 @@ export default function CompaniesBenefits() {
       value: '500+',
       label: 'SCIENTISTS & LEADERS PLACED',
       icon: (
-        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#B9D057" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="24" cy="24" r="18" />
           <circle cx="24" cy="24" r="11" />
-          <circle cx="24" cy="24" r="4" fill="#B9D057" />
+          <circle cx="24" cy="24" r="4" fill="#10B981" />
           <line x1="38" y1="10" x2="44" y2="4" />
           <path d="M40 4 L44 4 L44 8" />
         </svg>
@@ -19,11 +19,11 @@ export default function CompaniesBenefits() {
       value: '18 Days',
       label: 'AVERAGE TIME-TO-HIRE',
       icon: (
-        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#B9D057" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="8" y="14" width="32" height="24" rx="3" />
           <path d="M18 14 V10 C18 8.89 18.89 8 20 8 H28 C29.11 8 30 8.89 30 10 V14" />
           <line x1="8" y1="24" x2="40" y2="24" />
-          <circle cx="24" cy="24" r="2.5" fill="#B9D057" />
+          <circle cx="24" cy="24" r="2.5" fill="#10B981" />
         </svg>
       ),
     },
@@ -31,7 +31,7 @@ export default function CompaniesBenefits() {
       value: '98.4%',
       label: 'TALENT RETENTION RATE',
       icon: (
-        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#B9D057" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="8" y="10" width="32" height="22" rx="2" />
           <line x1="14" y1="16" x2="22" y2="16" />
           <line x1="14" y1="21" x2="26" y2="21" />
@@ -46,10 +46,10 @@ export default function CompaniesBenefits() {
       value: '100%',
       label: 'GXP & CLINICAL COMPLIANCE',
       icon: (
-        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#B9D057" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="24" cy="14" r="6" />
           <path d="M10 38 C10 30 16 26 24 26 C32 26 38 30 38 38" />
-          <polygon points="24,26 21,32 27,32" fill="#B9D057" />
+          <polygon points="24,26 21,32 27,32" fill="#10B981" />
           <line x1="24" y1="32" x2="24" y2="38" strokeWidth="2.5" />
         </svg>
       ),
@@ -57,17 +57,17 @@ export default function CompaniesBenefits() {
   ];
 
   return (
-    <section id="benefits" className="py-20 lg:py-24 bg-[#F1F6FB]">
+    <section id="benefits" className="py-20 lg:py-24 bg-[#F8F6FD]">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Heading, Bio Galaxi Value Prop & Action Button */}
           <div className="lg:col-span-6">
-            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#0077A9] block mb-3">
+            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#6D28D9] block mb-3">
               TALENT ECOSYSTEM & IMPACT
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] text-[#333333] font-carnas leading-[1.15] tracking-normal mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] text-[#2D1B36] font-carnas leading-[1.15] tracking-normal mb-8">
               Companies Benefits
             </h2>
 
@@ -82,7 +82,7 @@ export default function CompaniesBenefits() {
 
             <a
               href="#services"
-              className="inline-flex items-center justify-center px-10 py-3.5 bg-gradient-to-r from-[#006A96] to-[#0284AC] hover:from-[#005B82] hover:to-[#0077A9] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md active:scale-95 rounded-none"
+              className="inline-flex items-center justify-center px-10 py-3.5 bg-gradient-to-r from-[#4C1D95] via-[#581C87] to-[#10B981] hover:from-[#3B1366] hover:to-[#059669] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md hover:shadow-lg active:scale-95 rounded-none"
             >
               MORE INFO
             </a>
@@ -96,7 +96,7 @@ export default function CompaniesBenefits() {
                   <div className="mb-4">
                     {item.icon}
                   </div>
-                  <div className="text-4xl sm:text-[46px] font-carnas text-[#333333] leading-none mb-3">
+                  <div className="text-4xl sm:text-[46px] font-carnas text-[#2D1B36] leading-none mb-3">
                     {item.value}
                   </div>
                   <div className="text-[11px] font-extrabold tracking-[0.16em] uppercase text-[#777777]">

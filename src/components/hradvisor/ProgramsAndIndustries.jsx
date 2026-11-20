@@ -36,14 +36,14 @@ export default function ProgramsAndIndustries() {
   ];
 
   return (
-    <section id="industries" className="py-20 lg:py-24 bg-[#F1F6FB] relative">
+    <section id="industries" className="py-20 lg:py-24 bg-[#F8F6FD] relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-5 h-[2px] bg-[#B9D057] rounded-full inline-block" />
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#035A95]">
+            <span className="w-5 h-[2px] bg-[#10B981] rounded-full inline-block" />
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#6D28D9]">
               Sector Focus
             </span>
           </div>
@@ -76,12 +76,12 @@ export default function ProgramsAndIndustries() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   
                   {/* Category Pill */}
-                  <span className="absolute top-3 left-3 bg-[#035A95] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 left-3 bg-[#3B1366] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs">
                     {ind.badge}
                   </span>
 
                   {/* Icon at bottom-right of image */}
-                  <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-white text-[#035A95] flex items-center justify-center shadow-md">
+                  <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-white text-[#6D28D9] flex items-center justify-center shadow-md">
                     <Icon size={18} strokeWidth={2} />
                   </div>
                 </div>
@@ -89,10 +89,10 @@ export default function ProgramsAndIndustries() {
                 {/* Card Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9D057] block mb-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#10B981] block mb-1">
                       {ind.category}
                     </span>
-                    <h3 className="text-base font-bold text-[#2A2A2A] group-hover:text-[#035A95] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base font-bold text-[#2A2A2A] group-hover:text-[#6D28D9] transition-colors mb-2 leading-snug">
                       {ind.title}
                     </h3>
                     <p className="text-xs text-slate-500 leading-relaxed font-normal">
@@ -101,10 +101,10 @@ export default function ProgramsAndIndustries() {
                   </div>
 
                   <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#035A95] group-hover:text-[#B9D057] transition-colors uppercase tracking-wider">
+                    <span className="text-xs font-bold text-[#6D28D9] group-hover:text-[#10B981] transition-colors uppercase tracking-wider">
                       Explore Sector
                     </span>
-                    <ArrowRight size={13} className="text-[#035A95] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={13} className="text-[#6D28D9] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>

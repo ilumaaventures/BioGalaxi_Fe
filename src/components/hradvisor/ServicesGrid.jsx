@@ -29,7 +29,7 @@ export default function ServicesGrid() {
         <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="24" cy="14" r="7" />
           <path d="M10 38 C10 30 16 26 24 26 C32 26 38 30 38 38" />
-          <polygon points="24,26 21,32 27,32" fill="#B9D057" />
+          <polygon points="24,26 21,32 27,32" fill="#10B981" />
           <line x1="24" y1="32" x2="24" y2="38" strokeWidth="2.5" />
         </svg>
       ),
@@ -127,10 +127,10 @@ export default function ServicesGrid() {
           
           {/* Left Column: Eyebrow + Headline */}
           <div className="lg:col-span-6">
-            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#0077A9] block mb-3">
+            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#6D28D9] block mb-3">
               OUR SOLUTIONS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] text-[#333333] font-carnas leading-[1.18] tracking-normal">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] text-[#2D1B36] font-carnas leading-[1.18] tracking-normal">
               Everything Your People Function Needs. Under One Roof.
             </h2>
           </div>
@@ -157,12 +157,12 @@ export default function ServicesGrid() {
                 onClick={() => setActiveId(item.id)}
                 className={`p-7 sm:p-8 flex flex-col items-center text-center justify-between min-h-[260px] cursor-pointer transition-all duration-300 ${
                   isSelected
-                    ? 'bg-[#0077A9] text-white shadow-xl scale-[1.02]'
-                    : 'bg-[#F1F6FB] text-[#333333] hover:bg-white hover:shadow-md'
+                    ? 'bg-gradient-to-br from-[#3B1366] to-[#581C87] text-white shadow-xl shadow-purple-950/20 scale-[1.02] ring-2 ring-[#10B981]/50'
+                    : 'bg-[#F8F6FD] text-[#333333] hover:bg-white hover:shadow-md hover:border hover:border-[#6D28D9]/20'
                 }`}
               >
                 <div className={`mb-5 flex items-center justify-center ${
-                  isSelected ? 'text-white' : 'text-[#0077A9]'
+                  isSelected ? 'text-[#10B981]' : 'text-[#6D28D9]'
                 }`}>
                   {item.icon}
                 </div>
