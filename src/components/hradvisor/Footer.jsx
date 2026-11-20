@@ -89,11 +89,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#benefits" className="hover:text-[#10B981] transition-colors">
-                  Company Benefits
-                </a>
-              </li>
-              <li>
                 <a href="#testimonials" className="hover:text-[#10B981] transition-colors">
                   Impact & Testimonials
                 </a>
