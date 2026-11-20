@@ -12,7 +12,7 @@ export default function HowWeAreDifferent() {
 
           {/* Left Column: Eyebrow + Headline */}
           <div className="lg:col-span-6">
-            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#0077A9] block mb-3">
+            <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#6D28D9] block mb-3">
               HOW WE ARE DIFFERENT
             </span>
 
@@ -47,14 +47,14 @@ export default function HowWeAreDifferent() {
             />
           </div>
 
-          {/* Blue Callout Box - Moved Slightly Down */}
-          <div className="relative lg:absolute lg:bottom-[-20px] lg:left-0 w-full lg:w-[46%] bg-[#0077A9] p-8 sm:p-12 text-white z-10 shadow-lg mt-4 lg:mt-0">
+          {/* Purple & Green Accent Callout Box - Moved Slightly Down */}
+          <div className="relative lg:absolute lg:bottom-[-20px] lg:left-0 w-full lg:w-[46%] bg-gradient-to-br from-[#2E1065] to-[#4C1D95] p-8 sm:p-12 text-white z-10 shadow-xl shadow-purple-950/20 mt-4 lg:mt-0">
             <p className="text-xl sm:text-2xl lg:text-[25px] font-carnas leading-[1.38] text-white mb-6">
               The simplest way to explain Bio Galaxi: we are an integrated talent partner that helps businesses manage their entire people function through technology, leadership and workforce solutions.
             </p>
 
-            {/* White underline */}
-            <div className="w-14 h-[2px] bg-white" />
+            {/* Vivid emerald green underline */}
+            <div className="w-14 h-[3px] bg-[#10B981] rounded-full" />
           </div>
 
         </div>

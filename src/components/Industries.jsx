@@ -26,10 +26,10 @@ export default function Industries() {
   };
 
   return (
-    <section id="industries" className="py-20 lg:py-28 relative bg-[#F4F9FF]">
+    <section id="industries" className="py-20 lg:py-28 relative bg-[#F8F6FD]">
       {/* Background Subtle Gradient Glow */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#2F7BEA]/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#1AA6A6]/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#6D28D9]/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#10B981]/8 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -41,9 +41,9 @@ export default function Industries() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0A2A5E] tracking-tight leading-[1.12] mb-5">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#3B1366] tracking-tight leading-[1.12] mb-5">
                 <span>Built Around People. </span>
-                <span className="bg-gradient-to-r from-[#2F7BEA] to-[#1AA6A6] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#6D28D9] to-[#10B981] bg-clip-text text-transparent">
                   Focused on Life Sciences.
                 </span>
               </h2>
@@ -57,11 +57,11 @@ export default function Industries() {
 
             {/* Specialized Competency Highlights */}
             <Reveal delay={0.25}>
-              <div className="bg-white/90 p-4 rounded-2xl border border-[#2F7BEA]/15 shadow-xs w-full space-y-2 mb-6">
-                <span className="text-[10px] font-mono uppercase text-[#1AA6A6] font-bold tracking-wider block">
+              <div className="bg-white/90 p-4 rounded-2xl border border-[#6D28D9]/15 shadow-xs w-full space-y-2 mb-6">
+                <span className="text-[10px] font-mono uppercase text-[#10B981] font-bold tracking-wider block">
                   Domain Specialization
                 </span>
-                <p className="text-xs font-semibold text-[#0A2A5E]">
+                <p className="text-xs font-semibold text-[#3B1366]">
                   We understand the regulatory intricacies of FDA/EMA submissions, cleanroom protocol standards, and biological intellectual property.
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function Industries() {
             <Reveal delay={0.3}>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-xs font-bold text-[#0A2A5E] hover:text-[#2F7BEA] transition-colors group"
+                className="inline-flex items-center gap-2 text-xs font-bold text-[#3B1366] hover:text-[#6D28D9] transition-colors group"
               >
                 <span>Discuss Your Specialized Talent Requirement</span>
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -90,7 +90,7 @@ export default function Industries() {
                   <div
                     onMouseEnter={() => setHoveredCard(item.id)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className="h-[360px] sm:h-[400px] relative rounded-3xl overflow-hidden group border border-[#2F7BEA]/20 shadow-[0_16px_40px_rgba(10,42,94,0.12)] flex flex-col justify-between p-5 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(10,42,94,0.18)]"
+                    className="h-[360px] sm:h-[400px] relative rounded-3xl overflow-hidden group border border-[#6D28D9]/20 shadow-[0_16px_40px_rgba(59,19,102,0.12)] flex flex-col justify-between p-5 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(59,19,102,0.18)]"
                   >
                     {/* Background Image with Rich Deep-Sea Tint */}
                     <img
@@ -101,11 +101,11 @@ export default function Industries() {
                     />
 
                     {/* Gradient Overlay for high-contrast typography */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#061838]/95 via-[#0A2A5E]/60 to-[#0A2A5E]/20 pointer-events-none transition-opacity duration-300 group-hover:opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B062E]/95 via-[#3B1366]/60 to-[#3B1366]/20 pointer-events-none transition-opacity duration-300 group-hover:opacity-90" />
 
                     {/* Top Row: Icon Badge + Domain Tag */}
                     <div className="relative z-10 flex items-center justify-between">
-                      <div className="w-10 h-10 rounded-2xl bg-white/95 backdrop-blur-md flex items-center justify-center text-[#2F7BEA] shadow-md group-hover:bg-[#1AA6A6] group-hover:text-white transition-colors duration-300">
+                      <div className="w-10 h-10 rounded-2xl bg-white/95 backdrop-blur-md flex items-center justify-center text-[#6D28D9] shadow-md group-hover:bg-[#10B981] group-hover:text-white transition-colors duration-300">
                         <Icon size={20} strokeWidth={2} />
                       </div>
                       <span className="text-[10px] font-mono text-white/90 bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/30">
@@ -119,7 +119,7 @@ export default function Industries() {
                         {item.title}
                       </h3>
                       
-                      <p className="text-[11px] text-[#B7D3FA] mb-3 leading-snug">
+                      <p className="text-[11px] text-[#C4B5FD] mb-3 leading-snug">
                         {item.subtitle}
                       </p>
 
@@ -137,13 +137,13 @@ export default function Industries() {
 
                       {/* Bottom Metric & Arrow Button */}
                       <div className="pt-3 border-t border-white/20 flex items-center justify-between">
-                        <span className="text-[10px] font-mono text-[#4FE1E1] font-semibold">
+                        <span className="text-[10px] font-mono text-[#34D399] font-semibold">
                           {item.metrics}
                         </span>
                         <ArrowButton 
                           href="#solutions" 
                           ariaLabel={`Learn more about ${item.title}`} 
-                          className="bg-white/95 text-[#0A2A5E] hover:bg-[#1AA6A6] hover:text-white"
+                          className="bg-white/95 text-[#3B1366] hover:bg-[#10B981] hover:text-white"
                         />
                       </div>
                     </div>

@@ -58,8 +58,8 @@ export default function HRAdvisorHero() {
       {/* ── Top Header Navigation Bar (Split at 70.6% Blue Gradient & 29.4% White) ── */}
       <header className="w-full flex flex-col lg:flex-row items-stretch relative z-30">
         
-        {/* Left Section: 70.6% Width Blue Gradient Header with Bio Galaxi Logo & Menu */}
-        <div className="w-full lg:w-[70.6%] bg-gradient-to-r from-[#035A95] via-[#0077A9] to-[#0498BD] px-6 sm:px-10 lg:pl-[5.8%] lg:pr-8 py-5 flex items-center justify-between">
+        {/* Left Section: 70.6% Width Purple Gradient Header with Bio Galaxi Logo & Menu */}
+        <div className="w-full lg:w-[70.6%] bg-gradient-to-r from-[#240A3E] via-[#3B1366] to-[#581C87] px-6 sm:px-10 lg:pl-[5.8%] lg:pr-8 py-5 flex items-center justify-between">
           
           {/* Bio Galaxi Official Brand Logo */}
           <a href="#home" className="flex items-center group py-0.5" aria-label="Bio Galaxi Home">
@@ -74,37 +74,37 @@ export default function HRAdvisorHero() {
           <nav className="hidden lg:flex items-center gap-7 xl:gap-8 text-[12px] font-extrabold tracking-[0.18em] uppercase">
             <a
               href="#home"
-              className="text-[#B9D057] transition-colors"
+              className="text-[#10B981] transition-colors"
             >
               HOME
             </a>
             <a
               href="#about"
-              className="text-white hover:text-[#B9D057] transition-colors"
+              className="text-white hover:text-[#10B981] transition-colors"
             >
               ABOUT US
             </a>
             <a
               href="#services"
-              className="text-white hover:text-[#B9D057] transition-colors"
+              className="text-white hover:text-[#10B981] transition-colors"
             >
               SOLUTIONS
             </a>
             <a
               href="#benefits"
-              className="text-white hover:text-[#B9D057] transition-colors"
+              className="text-white hover:text-[#10B981] transition-colors"
             >
               BENEFITS
             </a>
             <a
               href="#testimonials"
-              className="text-white hover:text-[#B9D057] transition-colors"
+              className="text-white hover:text-[#10B981] transition-colors"
             >
               IMPACT
             </a>
             <a
               href="#contacts"
-              className="text-white hover:text-[#B9D057] transition-colors"
+              className="text-white hover:text-[#10B981] transition-colors"
             >
               CONTACT
             </a>
@@ -117,10 +117,10 @@ export default function HRAdvisorHero() {
           
           {/* Phone */}
           <div className="flex items-center gap-2">
-            <Phone size={13} className="text-[#0077A9]" />
+            <Phone size={13} className="text-[#6D28D9]" />
             <a
               href="tel:+910000000000"
-              className="font-bold text-slate-800 text-[12px] tracking-tight hover:text-[#0077A9] transition-colors"
+              className="font-bold text-slate-800 text-[12px] tracking-tight hover:text-[#6D28D9] transition-colors"
             >
               +91 00000 00000
             </a>
@@ -130,13 +130,13 @@ export default function HRAdvisorHero() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-3 text-slate-600 text-xs">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[#0077A9] transition-colors">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[#6D28D9] transition-colors">
               <FaLinkedinIn size={12} />
             </a>
-            <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X" className="hover:text-[#0077A9] transition-colors">
+            <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X" className="hover:text-[#6D28D9] transition-colors">
               <FaXTwitter size={11} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-[#0077A9] transition-colors">
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-[#6D28D9] transition-colors">
               <FaYoutube size={13} />
             </a>
           </div>
@@ -146,7 +146,7 @@ export default function HRAdvisorHero() {
           {/* Search Trigger */}
           <button
             type="button"
-            className="text-slate-700 hover:text-[#0077A9] transition-colors p-1"
+            className="text-slate-700 hover:text-[#6D28D9] transition-colors p-1"
             aria-label="Search"
           >
             <Search size={14} strokeWidth={2.2} />
@@ -157,18 +157,18 @@ export default function HRAdvisorHero() {
       </header>
 
 
-      {/* ── Main Hero Slider Canvas (Asymmetric Split Frame: Left 70.6% Blue, Right 29.4% White) ── */}
+      {/* ── Main Hero Slider Canvas (Asymmetric Split Frame: Left 70.6% Purple, Right 29.4% White) ── */}
       <div className="w-full relative pb-10 sm:pb-12 lg:pb-16">
         {/* Background Dual-Tone Split Layer */}
         <div className="absolute inset-0 w-full h-full pointer-events-none flex">
-          <div className="w-full lg:w-[70.6%] h-full bg-gradient-to-r from-[#035A95] via-[#0077A9] to-[#0498BD]" />
+          <div className="w-full lg:w-[70.6%] h-full bg-gradient-to-r from-[#240A3E] via-[#3B1366] to-[#581C87]" />
           <div className="hidden lg:block lg:w-[29.4%] h-full bg-white" />
         </div>
 
         {/* ── Centered Slider Container (Starts at 5.8% left, Spans to 91% right) ── */}
         <div className="relative z-10 w-[92%] sm:w-[90%] lg:w-[85.2%] ml-[4%] sm:ml-[5%] lg:ml-[5.8%] pt-2 sm:pt-3">
           
-          <div className="w-full bg-white rounded-none shadow-[0_15px_45px_rgba(0,0,0,0.18)] overflow-hidden relative min-h-[440px] sm:min-h-[500px] lg:min-h-[560px] flex items-center">
+          <div className="w-full bg-white rounded-none shadow-[0_15px_45px_rgba(36,10,62,0.18)] overflow-hidden relative min-h-[440px] sm:min-h-[500px] lg:min-h-[560px] flex items-center">
             
             {/* Automatic Frequent Cross-Fade Slide Image Container */}
             <AnimatePresence mode="popLayout">
@@ -205,12 +205,12 @@ export default function HRAdvisorHero() {
                   className="flex flex-col items-start"
                 >
                   {/* Uppercase Eyebrow */}
-                  <span className="text-[12px] sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#0077A9] mb-4">
+                  <span className="text-[12px] sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#6D28D9] mb-4">
                     {slide.tag}
                   </span>
 
                   {/* Main Headline with Carnas Light Typography */}
-                  <h1 className="text-3xl sm:text-4xl lg:text-[50px] text-[#444444] leading-[1.12] tracking-normal mb-4 font-carnas">
+                  <h1 className="text-3xl sm:text-4xl lg:text-[50px] text-[#2D1B36] leading-[1.12] tracking-normal mb-4 font-carnas">
                     <span className="block">{slide.titleLine1}</span>
                     <span className="block">{slide.titleLine2}</span>
                   </h1>
@@ -220,10 +220,10 @@ export default function HRAdvisorHero() {
                     {slide.description}
                   </p>
 
-                  {/* Rectangular Blue Button */}
+                  {/* Rectangular Purple & Green Duo Button */}
                   <a
                     href={slide.buttonHref}
-                    className="inline-flex items-center justify-center px-9 py-3.5 bg-gradient-to-r from-[#006A96] to-[#0284AC] hover:from-[#005B82] hover:to-[#0077A9] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md active:scale-95 rounded-none"
+                    className="inline-flex items-center justify-center px-9 py-3.5 bg-gradient-to-r from-[#4C1D95] via-[#581C87] to-[#10B981] hover:from-[#3B1366] hover:to-[#059669] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md hover:shadow-lg active:scale-95 rounded-none"
                   >
                     {slide.buttonText}
                   </a>
@@ -233,13 +233,13 @@ export default function HRAdvisorHero() {
 
           </div>
 
-          {/* ── Bottom Controls: Thin White Arrows + Indicator Dots (Within Blue Region) ── */}
+          {/* ── Bottom Controls: Thin White Arrows + Indicator Dots (Within Purple Region) ── */}
           <div className="w-full pt-4 sm:pt-5 flex items-center justify-between">
             <div className="flex items-center gap-7 text-white">
               <button
                 type="button"
                 onClick={prevSlide}
-                className="text-white hover:text-[#B9D057] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
+                className="text-white hover:text-[#10B981] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
                 aria-label="Previous slide"
               >
                 <span className="text-2xl sm:text-3xl leading-none font-light group-hover:-translate-x-1 transition-transform">
@@ -250,7 +250,7 @@ export default function HRAdvisorHero() {
               <button
                 type="button"
                 onClick={nextSlide}
-                className="text-white hover:text-[#B9D057] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
+                className="text-white hover:text-[#10B981] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
                 aria-label="Next slide"
               >
                 <span className="text-2xl sm:text-3xl leading-none font-light group-hover:translate-x-1 transition-transform">
@@ -267,7 +267,7 @@ export default function HRAdvisorHero() {
                   type="button"
                   onClick={() => setCurrentSlide(idx)}
                   className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer ${
-                    currentSlide === idx ? 'w-6 bg-[#B9D057]' : 'w-2 bg-white/35 hover:bg-white/60'
+                    currentSlide === idx ? 'w-6 bg-[#10B981]' : 'w-2 bg-white/35 hover:bg-white/60'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />

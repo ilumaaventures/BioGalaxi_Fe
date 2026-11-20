@@ -19,10 +19,10 @@ export default function Pillars() {
   };
 
   return (
-    <section id="pillars" className="py-20 lg:py-28 relative bg-[#F4F9FF]">
+    <section id="pillars" className="py-20 lg:py-28 relative bg-[#F8F6FD]">
       {/* Background Subtle Gradient Blobs */}
-      <div className="absolute top-10 left-1/4 w-72 h-72 bg-[#2F7BEA]/6 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-[#1AA6A6]/6 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-10 left-1/4 w-72 h-72 bg-[#6D28D9]/6 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-[#10B981]/6 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -34,9 +34,9 @@ export default function Pillars() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0A2A5E] tracking-tight leading-[1.12]">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#3B1366] tracking-tight leading-[1.12]">
                 <span>One Integrated Ecosystem. </span>
-                <span className="bg-gradient-to-r from-[#2F7BEA] to-[#1AA6A6] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#6D28D9] to-[#10B981] bg-clip-text text-transparent">
                   Three Powerful Capabilities.
                 </span>
               </h2>
@@ -49,11 +49,11 @@ export default function Pillars() {
             </Reveal>
 
             <Reveal delay={0.25}>
-              <div className="mt-6 p-4 rounded-2xl bg-white/80 border border-[#2F7BEA]/15 shadow-xs w-full">
-                <span className="text-[10px] font-mono uppercase text-[#1AA6A6] font-bold tracking-wider block mb-1">
+              <div className="mt-6 p-4 rounded-2xl bg-white/80 border border-[#6D28D9]/15 shadow-xs w-full">
+                <span className="text-[10px] font-mono uppercase text-[#10B981] font-bold tracking-wider block mb-1">
                   Synergy Factor
                 </span>
-                <p className="text-xs font-semibold text-[#0A2A5E]">
+                <p className="text-xs font-semibold text-[#3B1366]">
                   Proprietary TMS software powers the decisions of our Fractional CHROs and accelerates specialized laboratory staffing.
                 </p>
               </div>
@@ -65,18 +65,18 @@ export default function Pillars() {
             
             {/* Pillar 1: Technology */}
             <Reveal delay={0.15}>
-              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(10,42,94,0.12)] border border-[#2F7BEA]/15 hover:border-[#2F7BEA]/40 transition-all duration-300">
+              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(59,19,102,0.12)] border border-[#6D28D9]/15 hover:border-[#6D28D9]/40 transition-all duration-300">
                 {/* Top Visual Area: Interactive TMS Telemetry Panel */}
-                <div className="h-48 w-full overflow-hidden relative bg-gradient-to-br from-[#E3EFFE] via-[#F4F9FF] to-[#D6E6FB] flex flex-col justify-between p-3.5">
-                  <div className="w-full h-full rounded-xl bg-white/95 border border-[#2F7BEA]/20 shadow-xs p-3 flex flex-col justify-between overflow-hidden relative">
+                <div className="h-48 w-full overflow-hidden relative bg-gradient-to-br from-[#EDE9FE] via-[#F8F6FD] to-[#D6E6FB] flex flex-col justify-between p-3.5">
+                  <div className="w-full h-full rounded-xl bg-white/95 border border-[#6D28D9]/20 shadow-xs p-3 flex flex-col justify-between overflow-hidden relative">
                     {/* Header bar */}
-                    <div className="flex items-center justify-between border-b border-[#E3EFFE] pb-1.5">
+                    <div className="flex items-center justify-between border-b border-[#EDE9FE] pb-1.5">
                       <div className="flex items-center gap-1.5">
-                        <Cpu size={12} className="text-[#2F7BEA]" />
-                        <span className="text-[10px] font-bold text-[#0A2A5E]">TMS Telemetry v2.4</span>
+                        <Cpu size={12} className="text-[#6D28D9]" />
+                        <span className="text-[10px] font-bold text-[#3B1366]">TMS Telemetry v2.4</span>
                       </div>
-                      <span className="text-[9px] bg-[#EBFBFA] text-[#1AA6A6] px-1.5 py-0.5 rounded font-mono font-bold flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#1AA6A6] animate-pulse" /> Live
+                      <span className="text-[9px] bg-[#ECFDF5] text-[#10B981] px-1.5 py-0.5 rounded font-mono font-bold flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" /> Live
                       </span>
                     </div>
 
@@ -91,13 +91,13 @@ export default function Pillars() {
                             type="button"
                             onClick={() => setActiveTechMetric(key)}
                             className={`p-1 rounded text-left transition-all ${
-                              isSelected ? 'bg-[#0A2A5E] text-white shadow-xs' : 'bg-[#F4F9FF] hover:bg-[#E3EFFE]'
+                              isSelected ? 'bg-[#3B1366] text-white shadow-xs' : 'bg-[#F8F6FD] hover:bg-[#EDE9FE]'
                             }`}
                           >
-                            <span className={`text-[8px] block font-mono ${isSelected ? 'text-[#8DB8F5]' : 'text-[#64748B]'}`}>
+                            <span className={`text-[8px] block font-mono ${isSelected ? 'text-[#A78BFA]' : 'text-[#64748B]'}`}>
                               {key.toUpperCase()}
                             </span>
-                            <span className={`text-[11px] font-bold ${isSelected ? 'text-white' : 'text-[#0A2A5E]'}`}>
+                            <span className={`text-[11px] font-bold ${isSelected ? 'text-white' : 'text-[#3B1366]'}`}>
                               {m.value}
                             </span>
                           </button>
@@ -106,13 +106,13 @@ export default function Pillars() {
                     </div>
 
                     {/* Dynamic Bar Spectrum */}
-                    <div className="flex items-end gap-1.5 h-10 pt-1 border-t border-[#E3EFFE]">
-                      <div className="w-1/6 bg-[#8DB8F5] rounded-t h-[50%]" />
-                      <div className="w-1/6 bg-[#2F7BEA] rounded-t h-[75%]" />
-                      <div className="w-1/6 bg-[#0A2A5E] rounded-t h-[95%]" />
-                      <div className="w-1/6 bg-[#2F7BEA] rounded-t h-[60%]" />
-                      <div className="w-1/6 bg-[#8DB8F5] rounded-t h-[80%]" />
-                      <div className="w-1/6 bg-[#1AA6A6] rounded-t h-[100%]" />
+                    <div className="flex items-end gap-1.5 h-10 pt-1 border-t border-[#EDE9FE]">
+                      <div className="w-1/6 bg-[#A78BFA] rounded-t h-[50%]" />
+                      <div className="w-1/6 bg-[#6D28D9] rounded-t h-[75%]" />
+                      <div className="w-1/6 bg-[#3B1366] rounded-t h-[95%]" />
+                      <div className="w-1/6 bg-[#6D28D9] rounded-t h-[60%]" />
+                      <div className="w-1/6 bg-[#A78BFA] rounded-t h-[80%]" />
+                      <div className="w-1/6 bg-[#10B981] rounded-t h-[100%]" />
                     </div>
                   </div>
                 </div>
@@ -121,12 +121,12 @@ export default function Pillars() {
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="w-2 h-2 rounded-full bg-[#2F7BEA]" />
-                      <span className="text-[10px] font-mono uppercase text-[#2F7BEA] font-bold tracking-wider">
+                      <span className="w-2 h-2 rounded-full bg-[#6D28D9]" />
+                      <span className="text-[10px] font-mono uppercase text-[#6D28D9] font-bold tracking-wider">
                         Pillar 01
                       </span>
                     </div>
-                    <h3 className="text-base font-bold text-[#0A2A5E] tracking-tight mb-2">
+                    <h3 className="text-base font-bold text-[#3B1366] tracking-tight mb-2">
                       Technology
                     </h3>
                     <p className="text-xs text-[#64748B] leading-relaxed">
@@ -134,7 +134,7 @@ export default function Pillars() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#E3EFFE] flex items-center justify-between">
+                  <div className="mt-5 pt-3 border-t border-[#EDE9FE] flex items-center justify-between">
                     <span className="text-[10px] font-mono text-[#64748B]">Digital Enablers</span>
                     <ArrowButton href="#technology" ariaLabel="Explore Technology Pillar" />
                   </div>
@@ -144,7 +144,7 @@ export default function Pillars() {
 
             {/* Pillar 2: Leadership */}
             <Reveal delay={0.25}>
-              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(10,42,94,0.12)] border border-[#2F7BEA]/15 hover:border-[#1AA6A6]/40 transition-all duration-300">
+              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(59,19,102,0.12)] border border-[#6D28D9]/15 hover:border-[#10B981]/40 transition-all duration-300">
                 {/* Top Visual Area: Executive Leadership with Glass Badges */}
                 <div className="h-48 w-full overflow-hidden relative">
                   <img
@@ -153,18 +153,18 @@ export default function Pillars() {
                     loading="lazy"
                     className="w-full h-full object-cover object-top filter saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A5E]/80 via-[#0A2A5E]/30 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B1366]/80 via-[#3B1366]/30 to-transparent pointer-events-none" />
                   
                   {/* Floating Strategic Badge */}
                   <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md rounded-full px-2.5 py-1 shadow-sm flex items-center gap-1.5 border border-white/60">
-                    <Shield size={12} className="text-[#1AA6A6]" />
-                    <span className="text-[9px] font-bold text-[#0A2A5E]">Fractional CHRO</span>
+                    <Shield size={12} className="text-[#10B981]" />
+                    <span className="text-[9px] font-bold text-[#3B1366]">Fractional CHRO</span>
                   </div>
 
                   {/* Bottom Image Stats */}
                   <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[10px] font-mono">
                     <span>Board-Level Governance</span>
-                    <span className="text-[#4FE1E1] font-bold">C-Suite Retained</span>
+                    <span className="text-[#34D399] font-bold">C-Suite Retained</span>
                   </div>
                 </div>
 
@@ -172,12 +172,12 @@ export default function Pillars() {
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="w-2 h-2 rounded-full bg-[#1AA6A6]" />
-                      <span className="text-[10px] font-mono uppercase text-[#1AA6A6] font-bold tracking-wider">
+                      <span className="w-2 h-2 rounded-full bg-[#10B981]" />
+                      <span className="text-[10px] font-mono uppercase text-[#10B981] font-bold tracking-wider">
                         Pillar 02
                       </span>
                     </div>
-                    <h3 className="text-base font-bold text-[#0A2A5E] tracking-tight mb-2">
+                    <h3 className="text-base font-bold text-[#3B1366] tracking-tight mb-2">
                       Leadership
                     </h3>
                     <p className="text-xs text-[#64748B] leading-relaxed">
@@ -185,7 +185,7 @@ export default function Pillars() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#E3EFFE] flex items-center justify-between">
+                  <div className="mt-5 pt-3 border-t border-[#EDE9FE] flex items-center justify-between">
                     <span className="text-[10px] font-mono text-[#64748B]">Strategic HR</span>
                     <ArrowButton href="#solutions" ariaLabel="Explore Leadership Pillar" />
                   </div>
@@ -195,21 +195,21 @@ export default function Pillars() {
 
             {/* Pillar 3: Execution */}
             <Reveal delay={0.35}>
-              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(10,42,94,0.12)] border border-[#2F7BEA]/15 hover:border-[#0A2A5E]/40 transition-all duration-300">
+              <Card className="h-full flex flex-col overflow-hidden bg-white group hover:shadow-[0_20px_45px_rgba(59,19,102,0.12)] border border-[#6D28D9]/15 hover:border-[#3B1366]/40 transition-all duration-300">
                 {/* Top Visual Area: Agile Workforce Deployment Engine */}
-                <div className="h-48 w-full rounded-t-xl bg-gradient-to-br from-[#0A2A5E] via-[#123B7A] to-[#061838] relative overflow-hidden flex flex-col justify-between p-3.5 text-white">
+                <div className="h-48 w-full rounded-t-xl bg-gradient-to-br from-[#3B1366] via-[#4C1D95] to-[#1B062E] relative overflow-hidden flex flex-col justify-between p-3.5 text-white">
                   {/* Subtle Grid Network SVG */}
                   <svg className="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 200 150">
-                    <line x1="30" y1="30" x2="100" y2="75" stroke="#4FE1E1" strokeWidth="1" strokeDasharray="3 3" />
-                    <line x1="170" y1="30" x2="100" y2="75" stroke="#4FE1E1" strokeWidth="1" strokeDasharray="3 3" />
-                    <line x1="50" y1="120" x2="100" y2="75" stroke="#4FE1E1" strokeWidth="1" strokeDasharray="3 3" />
-                    <line x1="150" y1="120" x2="100" y2="75" stroke="#4FE1E1" strokeWidth="1" strokeDasharray="3 3" />
-                    <circle cx="100" cy="75" r="5" fill="#4FE1E1" />
+                    <line x1="30" y1="30" x2="100" y2="75" stroke="#34D399" strokeWidth="1" strokeDasharray="3 3" />
+                    <line x1="170" y1="30" x2="100" y2="75" stroke="#34D399" strokeWidth="1" strokeDasharray="3 3" />
+                    <line x1="50" y1="120" x2="100" y2="75" stroke="#34D399" strokeWidth="1" strokeDasharray="3 3" />
+                    <line x1="150" y1="120" x2="100" y2="75" stroke="#34D399" strokeWidth="1" strokeDasharray="3 3" />
+                    <circle cx="100" cy="75" r="5" fill="#34D399" />
                   </svg>
 
                   {/* Header */}
                   <div className="flex items-center justify-between relative z-10">
-                    <span className="text-[10px] font-mono text-[#4FE1E1] font-bold">DEPLOYMENT SPRINT</span>
+                    <span className="text-[10px] font-mono text-[#34D399] font-bold">DEPLOYMENT SPRINT</span>
                     <span className="text-[9px] bg-white/10 px-2 py-0.5 rounded font-mono">14-Day Velocity</span>
                   </div>
 
@@ -224,7 +224,7 @@ export default function Pillars() {
                         <div className="w-7 h-7 rounded-full bg-white/15 border border-white/30 flex items-center justify-center text-[10px] font-bold text-white mb-1 shadow-xs">
                           {st.step}
                         </div>
-                        <span className="text-[8px] font-mono text-[#B7D3FA]">{st.label}</span>
+                        <span className="text-[8px] font-mono text-[#C4B5FD]">{st.label}</span>
                       </div>
                     ))}
                   </div>
@@ -232,7 +232,7 @@ export default function Pillars() {
                   {/* Bottom Metric */}
                   <div className="relative z-10 flex items-center justify-between text-[9px] text-white/70 border-t border-white/10 pt-1.5">
                     <span>99.2% Retention Target</span>
-                    <span className="text-[#4FE1E1] font-bold">Active Sprint</span>
+                    <span className="text-[#34D399] font-bold">Active Sprint</span>
                   </div>
                 </div>
 
@@ -240,12 +240,12 @@ export default function Pillars() {
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="w-2 h-2 rounded-full bg-[#0A2A5E]" />
-                      <span className="text-[10px] font-mono uppercase text-[#0A2A5E] font-bold tracking-wider">
+                      <span className="w-2 h-2 rounded-full bg-[#3B1366]" />
+                      <span className="text-[10px] font-mono uppercase text-[#3B1366] font-bold tracking-wider">
                         Pillar 03
                       </span>
                     </div>
-                    <h3 className="text-base font-bold text-[#0A2A5E] tracking-tight mb-2">
+                    <h3 className="text-base font-bold text-[#3B1366] tracking-tight mb-2">
                       Execution
                     </h3>
                     <p className="text-xs text-[#64748B] leading-relaxed">
@@ -253,7 +253,7 @@ export default function Pillars() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#E3EFFE] flex items-center justify-between">
+                  <div className="mt-5 pt-3 border-t border-[#EDE9FE] flex items-center justify-between">
                     <span className="text-[10px] font-mono text-[#64748B]">Operational Rigor</span>
                     <ArrowButton href="#solutions" ariaLabel="Explore Execution Pillar" />
                   </div>

@@ -27,19 +27,19 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto max-w-[580px] overflow-visible"
-        style={{ filter: 'drop-shadow(0 14px 40px rgba(47,123,234,0.12))' }}
+        style={{ filter: 'drop-shadow(0 14px 40px rgba(109,40,217,0.12))' }}
       >
         <defs>
           <radialGradient id="centralCoreGrad" cx="50%" cy="45%" r="50%">
-            <stop offset="0%" stopColor="#EBFBFA" stopOpacity="0.9" />
+            <stop offset="0%" stopColor="#ECFDF5" stopOpacity="0.9" />
             <stop offset="45%" stopColor="#D6EBFF" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#8DB8F5" stopOpacity="0.12" />
+            <stop offset="100%" stopColor="#A78BFA" stopOpacity="0.12" />
           </radialGradient>
 
           <linearGradient id="bioHelixGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1AA6A6" stopOpacity="0.6" />
-            <stop offset="50%" stopColor="#2F7BEA" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#0A2A5E" stopOpacity="0.5" />
+            <stop offset="0%" stopColor="#10B981" stopOpacity="0.6" />
+            <stop offset="50%" stopColor="#6D28D9" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#3B1366" stopOpacity="0.5" />
           </linearGradient>
 
           <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
@@ -52,13 +52,13 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
         </defs>
 
         {/* Outer Orbital Resonant Rings */}
-        <circle cx={cx} cy={cy} r="195" stroke="#B7D3FA" strokeWidth="0.8" strokeDasharray="6 6" opacity="0.35" />
-        <circle cx={cx} cy={cy} r="150" stroke="#1AA6A6" strokeWidth="0.75" strokeDasharray="4 8" opacity="0.3" />
-        <circle cx={cx} cy={cy} r="105" stroke="#2F7BEA" strokeWidth="0.6" strokeDasharray="3 5" opacity="0.3" />
+        <circle cx={cx} cy={cy} r="195" stroke="#C4B5FD" strokeWidth="0.8" strokeDasharray="6 6" opacity="0.35" />
+        <circle cx={cx} cy={cy} r="150" stroke="#10B981" strokeWidth="0.75" strokeDasharray="4 8" opacity="0.3" />
+        <circle cx={cx} cy={cy} r="105" stroke="#6D28D9" strokeWidth="0.6" strokeDasharray="3 5" opacity="0.3" />
 
         {/* Dynamic Elliptical Trajectories */}
-        <ellipse cx={cx} cy={cy} rx="205" ry="80" stroke="#8DB8F5" strokeWidth="0.8" opacity="0.25" transform={`rotate(-22 ${cx} ${cy})`} />
-        <ellipse cx={cx} cy={cy} rx="210" ry="70" stroke="#1AA6A6" strokeWidth="0.6" opacity="0.2" transform={`rotate(25 ${cx} ${cy})`} />
+        <ellipse cx={cx} cy={cy} rx="205" ry="80" stroke="#A78BFA" strokeWidth="0.8" opacity="0.25" transform={`rotate(-22 ${cx} ${cy})`} />
+        <ellipse cx={cx} cy={cy} rx="210" ry="70" stroke="#10B981" strokeWidth="0.6" opacity="0.2" transform={`rotate(25 ${cx} ${cy})`} />
 
         {/* Living Vector Connections to Avatars */}
         {avatars.map((av) => {
@@ -70,7 +70,7 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
                 y1={cy}
                 x2={av.x}
                 y2={av.y}
-                stroke={isSelected ? '#1AA6A6' : 'url(#bioHelixGlow)'}
+                stroke={isSelected ? '#10B981' : 'url(#bioHelixGlow)'}
                 strokeWidth={isSelected ? 1.8 : 1}
                 opacity={isSelected ? 0.9 : 0.45}
                 strokeDasharray={isSelected ? 'none' : '4 3'}
@@ -81,7 +81,7 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
                 cx={(cx + av.x) / 2}
                 cy={(cy + av.y) / 2}
                 r={isSelected ? 3.5 : 2}
-                fill={isSelected ? '#1AA6A6' : '#2F7BEA'}
+                fill={isSelected ? '#10B981' : '#6D28D9'}
                 opacity={0.8}
               />
             </g>
@@ -98,7 +98,7 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
             y1={avatars[a].y}
             x2={avatars[b].x}
             y2={avatars[b].y}
-            stroke="#B7D3FA"
+            stroke="#C4B5FD"
             strokeWidth="0.5"
             opacity="0.3"
             strokeDasharray="2 4"
@@ -107,27 +107,27 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
 
         {/* Central Symbiosis Core: Technology + Leadership + Execution */}
         <circle cx={cx} cy={cy} r="86" fill="url(#centralCoreGrad)" filter="url(#softGlow)" />
-        <circle cx={cx} cy={cy} r="86" stroke="#2F7BEA" strokeWidth="1.2" strokeOpacity="0.2" />
+        <circle cx={cx} cy={cy} r="86" stroke="#6D28D9" strokeWidth="1.2" strokeOpacity="0.2" />
 
         {/* Core Glyph & Cluster */}
         <g transform={`translate(${cx}, ${cy})`}>
           {/* Subtle Rotating Ring */}
-          <circle cx="0" cy="0" r="62" stroke="#1AA6A6" strokeWidth="0.8" strokeDasharray="5 5" opacity="0.4" />
+          <circle cx="0" cy="0" r="62" stroke="#10B981" strokeWidth="0.8" strokeDasharray="5 5" opacity="0.4" />
           
           {/* Central Human-Capital Icon */}
-          <circle cx="0" cy="-12" r="14" fill="#0A2A5E" />
-          <path d="M-20,18 C-20,2 -10,-2 0,-2 C10,-2 20,2 20,18 Z" fill="#0A2A5E" />
+          <circle cx="0" cy="-12" r="14" fill="#3B1366" />
+          <path d="M-20,18 C-20,2 -10,-2 0,-2 C10,-2 20,2 20,18 Z" fill="#3B1366" />
           <circle cx="-2" cy="-15" r="4" fill="white" opacity="0.2" />
 
           {/* Left Sub-Node: Technology */}
-          <circle cx="-32" cy="12" r="8" fill="#2F7BEA" />
-          <path d="M-44,30 C-44,20 -38,18 -32,18 C-26,18 -20,20 -20,30 Z" fill="#2F7BEA" opacity="0.9" />
+          <circle cx="-32" cy="12" r="8" fill="#6D28D9" />
+          <path d="M-44,30 C-44,20 -38,18 -32,18 C-26,18 -20,20 -20,30 Z" fill="#6D28D9" opacity="0.9" />
 
           {/* Right Sub-Node: Leadership */}
-          <circle cx="32" cy="12" r="8" fill="#1AA6A6" />
-          <path d="M20,30 C20,20 26,18 32,18 C38,18 44,20 44,30 Z" fill="#1AA6A6" opacity="0.9" />
+          <circle cx="32" cy="12" r="8" fill="#10B981" />
+          <path d="M20,30 C20,20 26,18 32,18 C38,18 44,20 44,30 Z" fill="#10B981" opacity="0.9" />
 
-          <text x="0" y="44" textAnchor="middle" fill="#0A2A5E" fontSize="9" fontWeight="800" letterSpacing="0.08em">
+          <text x="0" y="44" textAnchor="middle" fill="#3B1366" fontSize="9" fontWeight="800" letterSpacing="0.08em">
             BIO GALAXI CORE
           </text>
         </g>
@@ -145,7 +145,7 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
             >
               {/* Outer Pulse Wave for selected */}
               {isSelected && (
-                <circle cx="0" cy="0" r="28" fill="none" stroke="#1AA6A6" strokeWidth="1.5" className="animate-ping" opacity="0.4" />
+                <circle cx="0" cy="0" r="28" fill="none" stroke="#10B981" strokeWidth="1.5" className="animate-ping" opacity="0.4" />
               )}
 
               {/* Glass Bubble Base */}
@@ -153,18 +153,18 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
                 cx="0"
                 cy="0"
                 r="22"
-                fill={isSelected ? '#0A2A5E' : 'white'}
-                stroke={isSelected ? '#1AA6A6' : '#2F7BEA'}
+                fill={isSelected ? '#3B1366' : 'white'}
+                stroke={isSelected ? '#10B981' : '#6D28D9'}
                 strokeWidth={isSelected ? '2' : '1.2'}
                 strokeOpacity={isSelected ? '1' : '0.4'}
                 filter="url(#softGlow)"
               />
 
               {/* Avatar Head & Torso */}
-              <circle cx="0" cy="-5" r="7" fill={isSelected ? '#4FE1E1' : '#2F7BEA'} />
+              <circle cx="0" cy="-5" r="7" fill={isSelected ? '#34D399' : '#6D28D9'} />
               <path
                 d="M-10,13 C-10,7 -5,5 0,5 C5,5 10,7 10,13 Z"
-                fill={isSelected ? '#FFFFFF' : '#0A2A5E'}
+                fill={isSelected ? '#FFFFFF' : '#3B1366'}
                 opacity={isSelected ? 0.95 : 0.85}
               />
 
@@ -173,7 +173,7 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
                 cx="14"
                 cy="-14"
                 r="3.5"
-                fill={idx % 2 === 0 ? '#1AA6A6' : '#2F7BEA'}
+                fill={idx % 2 === 0 ? '#10B981' : '#6D28D9'}
                 stroke="white"
                 strokeWidth="1.5"
               />
@@ -190,18 +190,18 @@ function InteractiveBioNetwork({ activeNode, setActiveNode }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.94 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl border border-[#1AA6A6]/40 shadow-[0_16px_36px_rgba(10,42,94,0.18)] rounded-2xl px-4 py-3 min-w-[260px] max-w-[320px] z-30"
+            className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl border border-[#10B981]/40 shadow-[0_16px_36px_rgba(59,19,102,0.18)] rounded-2xl px-4 py-3 min-w-[260px] max-w-[320px] z-30"
           >
             <div className="flex items-start justify-between gap-3">
               <div>
                 <div className="flex items-center gap-1.5">
-                  <h5 className="text-xs font-bold text-[#0A2A5E] tracking-tight">{activeNode.name}</h5>
-                  <CheckCircle2 size={12} className="text-[#1AA6A6]" />
+                  <h5 className="text-xs font-bold text-[#3B1366] tracking-tight">{activeNode.name}</h5>
+                  <CheckCircle2 size={12} className="text-[#10B981]" />
                 </div>
-                <p className="text-[11px] font-semibold text-[#2F7BEA] leading-tight">{activeNode.role}</p>
+                <p className="text-[11px] font-semibold text-[#6D28D9] leading-tight">{activeNode.role}</p>
                 <p className="text-[10px] text-[#64748B] mt-0.5 font-mono">{activeNode.domain}</p>
               </div>
-              <span className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-[#EBFBFA] text-[#1AA6A6] border border-[#1AA6A6]/20">
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-[#ECFDF5] text-[#10B981] border border-[#10B981]/20">
                 {activeNode.status}
               </span>
             </div>
@@ -248,13 +248,13 @@ export default function Hero() {
       id="hero"
       className="relative overflow-hidden pt-24 lg:pt-28 pb-8 lg:pb-12"
       style={{
-        background: 'linear-gradient(135deg, #F4F9FF 0%, #EBF4FE 28%, #DCEBFC 58%, #CDE2F4 85%, #C2DCF0 100%)',
+        background: 'linear-gradient(135deg, #F8F6FD 0%, #EBF4FE 28%, #DCEBFC 58%, #CDE2F4 85%, #C2DCF0 100%)',
       }}
     >
       {/* Precision Ambient Radial Glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-[15%] left-[8%] w-[580px] h-[580px] bg-[#2F7BEA]/10 rounded-full blur-[110px]" />
-        <div className="absolute top-[30%] right-[5%] w-[480px] h-[480px] bg-[#1AA6A6]/12 rounded-full blur-[90px]" />
+        <div className="absolute -top-[15%] left-[8%] w-[580px] h-[580px] bg-[#6D28D9]/10 rounded-full blur-[110px]" />
+        <div className="absolute top-[30%] right-[5%] w-[480px] h-[480px] bg-[#10B981]/12 rounded-full blur-[90px]" />
         <div className="absolute bottom-[0%] left-[25%] w-[380px] h-[380px] bg-white/70 rounded-full blur-[80px]" />
       </div>
 
@@ -268,7 +268,7 @@ export default function Hero() {
             key={`wave-l-${i}`}
             d={`M${8 + i * 11},0 Q${22 + i * 11},65 ${8 + i * 11},130 Q${-6 + i * 11},195 ${8 + i * 11},260`}
             fill="none"
-            stroke="#2F7BEA"
+            stroke="#6D28D9"
             strokeWidth="0.7"
             strokeDasharray="2 4"
           />
@@ -284,15 +284,15 @@ export default function Hero() {
             
             {/* Live Status Pill Badge */}
             <Reveal delay={0.05}>
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#2F7BEA]/20 shadow-[0_2px_12px_rgba(47,123,234,0.09)] backdrop-blur-md">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#6D28D9]/20 shadow-[0_2px_12px_rgba(109,40,217,0.09)] backdrop-blur-md">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1AA6A6] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1AA6A6]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]" />
                 </span>
-                <span className="text-[11px] font-bold tracking-tight text-[#0A2A5E]">
+                <span className="text-[11px] font-bold tracking-tight text-[#3B1366]">
                   {hero.badge}
                 </span>
-                <span className="text-[10px] font-mono font-semibold text-[#1AA6A6] bg-[#EBFBFA] px-1.5 py-0.5 rounded">
+                <span className="text-[10px] font-mono font-semibold text-[#10B981] bg-[#ECFDF5] px-1.5 py-0.5 rounded">
                   Life Sciences Focus
                 </span>
               </div>
@@ -300,13 +300,13 @@ export default function Hero() {
 
             {/* Headline with High-Impact Gradient Span */}
             <Reveal delay={0.12}>
-              <h1 className="font-extrabold text-[#0A2A5E] leading-[1.06] tracking-tight text-[38px] sm:text-[44px] lg:text-[48px]">
+              <h1 className="font-extrabold text-[#3B1366] leading-[1.06] tracking-tight text-[38px] sm:text-[44px] lg:text-[48px]">
                 <span>Transforming </span>
-                <span className="bg-gradient-to-r from-[#0A2A5E] via-[#2F7BEA] to-[#1AA6A6] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#3B1366] via-[#6D28D9] to-[#10B981] bg-clip-text text-transparent">
                   People Functions.
                 </span>
                 <span className="block mt-1">Empowering</span>
-                <span className="block bg-gradient-to-r from-[#1AA6A6] to-[#0A2A5E] bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#10B981] to-[#3B1366] bg-clip-text text-transparent">
                   Business Growth.
                 </span>
               </h1>
@@ -334,14 +334,14 @@ export default function Hero() {
             {/* Live Science Verification Tag */}
             <Reveal delay={0.33}>
               <div className="flex items-center gap-2 pt-2 text-[11px] font-medium text-[#64748B]">
-                <ShieldCheck size={14} className="text-[#1AA6A6]" />
+                <ShieldCheck size={14} className="text-[#10B981]" />
                 <span>GxP-compliant talent pipelines · ISO 9001 aligned methodology</span>
               </div>
             </Reveal>
 
             {/* Architectural Watermark */}
             <Reveal delay={0.38}>
-              <div className="select-none pointer-events-none opacity-[0.07] font-black text-[30px] sm:text-[34px] lg:text-[36px] leading-[1.1] text-[#2F7BEA] tracking-wider whitespace-pre pt-2">
+              <div className="select-none pointer-events-none opacity-[0.07] font-black text-[30px] sm:text-[34px] lg:text-[36px] leading-[1.1] text-[#6D28D9] tracking-wider whitespace-pre pt-2">
                 {hero.watermarkLines.map((wLine, idx) => (
                   <div key={idx}>{wLine}</div>
                 ))}
@@ -368,13 +368,13 @@ export default function Hero() {
                   key={card.id}
                   animate={{ y: offset.y }}
                   transition={{ duration: offset.duration, repeat: Infinity, ease: 'easeInOut' }}
-                  className={`absolute ${posClass} hidden lg:flex items-center gap-3 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-[#2F7BEA]/15 shadow-[0_8px_24px_rgba(10,42,94,0.08)] min-w-[185px] z-20 transition-all hover:scale-105 hover:shadow-[0_12px_30px_rgba(10,42,94,0.14)]`}
+                  className={`absolute ${posClass} hidden lg:flex items-center gap-3 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-[#6D28D9]/15 shadow-[0_8px_24px_rgba(59,19,102,0.08)] min-w-[185px] z-20 transition-all hover:scale-105 hover:shadow-[0_12px_30px_rgba(59,19,102,0.14)]`}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#E3EFFE] flex items-center justify-center text-[#2F7BEA] flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#EDE9FE] flex items-center justify-center text-[#6D28D9] flex-shrink-0">
                     <Icon size={17} strokeWidth={1.8} />
                   </div>
                   <div>
-                    <h4 className="text-[11px] font-bold text-[#0A2A5E] tracking-tight leading-tight">
+                    <h4 className="text-[11px] font-bold text-[#3B1366] tracking-tight leading-tight">
                       {card.title}
                     </h4>
                     <p className="text-[10px] text-[#64748B] font-medium leading-tight mt-0.5">
@@ -389,19 +389,19 @@ export default function Hero() {
 
         {/* Real-Time Telemetry Metrics Bar */}
         <Reveal delay={0.4}>
-          <div className="mt-4 pt-6 border-t border-[#2F7BEA]/15 grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="mt-4 pt-6 border-t border-[#6D28D9]/15 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {hero.stats?.map((stat) => (
               <div
                 key={stat.id}
-                className="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-[#2F7BEA]/15 shadow-[0_4px_16px_rgba(10,42,94,0.04)] hover:border-[#1AA6A6]/40 transition-all group"
+                className="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-[#6D28D9]/15 shadow-[0_4px_16px_rgba(59,19,102,0.04)] hover:border-[#10B981]/40 transition-all group"
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-[#0A2A5E] tracking-tight group-hover:text-[#2F7BEA] transition-colors">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-[#3B1366] tracking-tight group-hover:text-[#6D28D9] transition-colors">
                     {stat.value}
                   </span>
-                  <Activity size={15} className="text-[#1AA6A6] opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <Activity size={15} className="text-[#10B981] opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h5 className="text-xs font-bold text-[#0A2A5E] leading-snug">
+                <h5 className="text-xs font-bold text-[#3B1366] leading-snug">
                   {stat.label}
                 </h5>
                 <p className="text-[10px] font-mono text-[#64748B] mt-0.5">

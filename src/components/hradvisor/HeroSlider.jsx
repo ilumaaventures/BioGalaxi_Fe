@@ -15,7 +15,7 @@ export default function HeroSlider() {
       description: 'Your integrated talent partner, combining proprietary TMS technology, strategic leadership and specialized workforce execution for Bio, Pharma and Life Sciences.',
       primaryBtn: { label: 'Explore Solutions', href: '#services' },
       secondaryBtn: { label: 'Talk to Our Team', href: '#contact' },
-      bgGradient: 'from-[#033E6B] via-[#035A95] to-[#0481AC]',
+      bgGradient: 'from-[#1B062E] via-[#3B1366] to-[#581C87]',
       badge: 'Life Sciences Focus',
     },
     {
@@ -26,7 +26,7 @@ export default function HeroSlider() {
       description: 'With seasoned Fractional CHROs and automated TMS analytics at your disposal, face complex hiring, GxP compliance and retention challenges with confidence.',
       primaryBtn: { label: 'Discover TMS Platform', href: '#ecosystem' },
       secondaryBtn: { label: 'Schedule Consultation', href: '#contact' },
-      bgGradient: 'from-[#0B2545] via-[#0D3B66] to-[#035A95]',
+      bgGradient: 'from-[#120324] via-[#260A3F] to-[#4C1D95]',
       badge: 'GxP Certified Pipelines',
     },
   ];
@@ -65,15 +65,15 @@ export default function HeroSlider() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Tag / Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#B9D057] text-xs font-extrabold uppercase tracking-widest mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#B9D057] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#10B981] text-xs font-extrabold uppercase tracking-widest mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
               <span>{slide.tag}</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.08] tracking-tight mb-4">
               <span>{slide.title}</span><br />
-              <span className="text-[#B9D057]">{slide.highlight}</span>
+              <span className="text-[#10B981]">{slide.highlight}</span>
             </h1>
 
             {/* Paragraph */}
@@ -85,7 +85,7 @@ export default function HeroSlider() {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href={slide.primaryBtn.href}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#B9D057] text-[#035A95] text-xs font-extrabold uppercase tracking-wider hover:bg-white transition-all shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#10B981] text-[#1B062E] text-xs font-extrabold uppercase tracking-wider hover:bg-white hover:text-[#3B1366] transition-all shadow-md active:scale-95"
               >
                 <span>{slide.primaryBtn.label}</span>
                 <ArrowRight size={14} strokeWidth={2.5} />
@@ -144,7 +144,7 @@ export default function HeroSlider() {
             type="button"
             onClick={() => setCurrentSlide(idx)}
             className={`h-2.5 rounded-full transition-all duration-300 ${
-              currentSlide === idx ? 'w-8 bg-[#B9D057]' : 'w-2.5 bg-white/40 hover:bg-white/70'
+              currentSlide === idx ? 'w-8 bg-[#10B981]' : 'w-2.5 bg-white/40 hover:bg-white/70'
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />

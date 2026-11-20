@@ -5,7 +5,7 @@ import logoWhite from '../../assets/logo_biogalaxi_white.png';
 
 export default function Footer() {
   return (
-    <footer id="contacts" className="w-full bg-gradient-to-r from-[#035A95] via-[#0077A9] to-[#0498BD] text-white pt-16 sm:pt-20 pb-10">
+    <footer id="contacts" className="w-full bg-gradient-to-r from-[#240A3E] via-[#3B1366] to-[#581C87] text-white pt-16 sm:pt-20 pb-10">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         
         {/* 4-Column Main Layout matching template */}
@@ -25,18 +25,18 @@ export default function Footer() {
 
             <ul className="space-y-3.5 text-xs text-white/85">
               <li className="flex items-start gap-3">
-                <Home size={15} className="text-[#B9D057] flex-shrink-0 mt-0.5" />
+                <Home size={15} className="text-[#10B981] flex-shrink-0 mt-0.5" />
                 <span>Life Sciences Innovation Corridor,<br />Tech Park, Suite 400</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={15} className="text-[#B9D057] flex-shrink-0" />
-                <a href="mailto:info@biogalaxi.com" className="hover:text-[#B9D057] transition-colors">
+                <Mail size={15} className="text-[#10B981] flex-shrink-0" />
+                <a href="mailto:info@biogalaxi.com" className="hover:text-[#10B981] transition-colors">
                   info@biogalaxi.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Smartphone size={15} className="text-[#B9D057] flex-shrink-0" />
-                <a href="tel:+910000000000" className="hover:text-[#B9D057] transition-colors">
+                <Smartphone size={15} className="text-[#10B981] flex-shrink-0" />
+                <a href="tel:+910000000000" className="hover:text-[#10B981] transition-colors">
                   +91 00000 00000
                 </a>
               </li>
@@ -50,22 +50,22 @@ export default function Footer() {
             </h5>
             <ul className="space-y-3 text-xs text-white/85">
               <li>
-                <a href="#services" className="hover:text-[#B9D057] transition-colors">
+                <a href="#services" className="hover:text-[#10B981] transition-colors">
                   Talent Management System (TMS)
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#B9D057] transition-colors">
+                <a href="#services" className="hover:text-[#10B981] transition-colors">
                   Fractional CHRO Solutions
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#B9D057] transition-colors">
+                <a href="#services" className="hover:text-[#10B981] transition-colors">
                   Staffing & Workforce Solutions
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#B9D057] transition-colors">
+                <a href="#services" className="hover:text-[#10B981] transition-colors">
                   Employee Welfare & Gifting
                 </a>
               </li>
@@ -79,22 +79,22 @@ export default function Footer() {
             </h5>
             <ul className="space-y-3 text-xs text-white/85">
               <li>
-                <a href="#home" className="hover:text-[#B9D057] transition-colors">
+                <a href="#home" className="hover:text-[#10B981] transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#B9D057] transition-colors">
+                <a href="#about" className="hover:text-[#10B981] transition-colors">
                   About Bio Galaxi
                 </a>
               </li>
               <li>
-                <a href="#benefits" className="hover:text-[#B9D057] transition-colors">
+                <a href="#benefits" className="hover:text-[#10B981] transition-colors">
                   Company Benefits
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-[#B9D057] transition-colors">
+                <a href="#testimonials" className="hover:text-[#10B981] transition-colors">
                   Impact & Testimonials
                 </a>
               </li>
@@ -108,26 +108,26 @@ export default function Footer() {
             </h5>
             <ul className="space-y-3 text-xs text-white/85">
               <li>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#B9D057] transition-colors">
-                  <FaLinkedinIn size={12} className="text-[#B9D057]" />
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
+                  <FaLinkedinIn size={12} className="text-[#10B981]" />
                   <span>LinkedIn</span>
                 </a>
               </li>
               <li>
-                <a href="https://x.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#B9D057] transition-colors">
-                  <FaXTwitter size={12} className="text-[#B9D057]" />
+                <a href="https://x.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
+                  <FaXTwitter size={12} className="text-[#10B981]" />
                   <span>Twitter / X</span>
                 </a>
               </li>
               <li>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#B9D057] transition-colors">
-                  <FaYoutube size={13} className="text-[#B9D057]" />
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
+                  <FaYoutube size={13} className="text-[#10B981]" />
                   <span>YouTube</span>
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#B9D057] transition-colors">
-                  <FaInstagram size={13} className="text-[#B9D057]" />
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
+                  <FaInstagram size={13} className="text-[#10B981]" />
                   <span>Instagram</span>
                 </a>
               </li>

@@ -9,7 +9,7 @@ import Footer from './components/hradvisor/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-[#4C4C4C] font-sans antialiased overflow-x-hidden selection:bg-[#B9D057]/40 selection:text-[#0077A9]">
+    <div className="min-h-screen bg-white text-[#4C4C4C] font-sans antialiased overflow-x-hidden selection:bg-[#10B981]/30 selection:text-[#3B1366]">
       {/* 1. Header Navigation & Auto Smooth Hero Slider */}
       <HRAdvisorHero />
 

@@ -42,7 +42,7 @@ export default function Header() {
     <header
       className={`sticky top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled
-          ? 'shadow-[0_4px_25px_rgba(3,90,149,0.08)] py-3 border-b border-slate-100'
+          ? 'shadow-[0_4px_25px_rgba(59,19,102,0.08)] py-3 border-b border-slate-100'
           : 'py-4 border-b border-slate-100'
       }`}
     >
@@ -52,7 +52,7 @@ export default function Header() {
         <a href="#home" className="flex items-center gap-3 group">
           <Logo height="h-10" />
           <div className="hidden sm:block border-l border-slate-200 pl-3">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#035A95] block leading-tight">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#6D28D9] block leading-tight">
               HR Advisor
             </span>
             <span className="text-[9px] text-slate-400 block leading-tight">
@@ -74,10 +74,10 @@ export default function Header() {
                 >
                   <a
                     href={link.href}
-                    className="flex items-center gap-1 py-2 hover:text-[#035A95] transition-colors"
+                    className="flex items-center gap-1 py-2 hover:text-[#6D28D9] transition-colors"
                   >
                     <span>{link.label}</span>
-                    <ChevronDown size={12} className={`transition-transform duration-200 ${servicesDropdown ? 'rotate-180 text-[#035A95]' : ''}`} />
+                    <ChevronDown size={12} className={`transition-transform duration-200 ${servicesDropdown ? 'rotate-180 text-[#6D28D9]' : ''}`} />
                   </a>
 
                   {servicesDropdown && (
@@ -87,7 +87,7 @@ export default function Header() {
                           <a
                             key={sub.name}
                             href={sub.href}
-                            className="block px-3 py-2 text-xs font-semibold normal-case text-slate-600 hover:text-[#035A95] hover:bg-[#F1F6FB] rounded-lg transition-colors"
+                            className="block px-3 py-2 text-xs font-semibold normal-case text-slate-600 hover:text-[#6D28D9] hover:bg-[#F8F6FD] rounded-lg transition-colors"
                           >
                             {sub.name}
                           </a>
@@ -103,7 +103,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="py-2 hover:text-[#035A95] transition-colors"
+                className="py-2 hover:text-[#6D28D9] transition-colors"
               >
                 {link.label}
               </a>
@@ -115,7 +115,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#B9D057] text-[#035A95] text-xs font-extrabold uppercase tracking-wider hover:bg-[#a6bd47] transition-all shadow-sm active:scale-95"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#10B981] text-[#1B062E] text-xs font-extrabold uppercase tracking-wider hover:bg-[#34D399] transition-all shadow-sm active:scale-95"
           >
             <span>Free Consultation</span>
             <ArrowRight size={13} strokeWidth={2.5} />
@@ -126,7 +126,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-[#035A95] rounded-lg hover:bg-slate-50 transition-colors"
+          className="lg:hidden p-2 text-[#6D28D9] rounded-lg hover:bg-slate-50 transition-colors"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -142,7 +142,7 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-1.5 hover:text-[#035A95] transition-colors"
+                className="py-1.5 hover:text-[#6D28D9] transition-colors"
               >
                 {link.label}
               </a>
@@ -151,7 +151,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#B9D057] text-[#035A95] text-xs font-extrabold uppercase tracking-wider shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#10B981] text-[#1B062E] text-xs font-extrabold uppercase tracking-wider shadow-sm"
               >
                 <span>Free Consultation</span>
                 <ArrowRight size={13} />

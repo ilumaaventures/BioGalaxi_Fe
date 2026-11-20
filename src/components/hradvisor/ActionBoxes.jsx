@@ -43,7 +43,7 @@ export default function ActionBoxes() {
           return (
             <div
               key={box.id}
-              className="bg-white rounded-2xl border border-slate-200/90 shadow-[0_12px_36px_rgba(3,90,149,0.08)] hover:shadow-[0_20px_50px_rgba(3,90,149,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+              className="bg-white rounded-2xl border border-slate-200/90 shadow-[0_12px_36px_rgba(59,19,102,0.08)] hover:shadow-[0_20px_50px_rgba(59,19,102,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               {/* Image Preview at Top */}
               <div className="w-full h-36 overflow-hidden bg-slate-100 relative">
@@ -55,7 +55,7 @@ export default function ActionBoxes() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 
                 {/* Floating Icon */}
-                <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-[#035A95] text-white flex items-center justify-center shadow-md">
+                <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-gradient-to-br from-[#3B1366] to-[#581C87] text-white flex items-center justify-center shadow-md">
                   <Icon size={20} strokeWidth={2} />
                 </div>
               </div>
@@ -63,10 +63,10 @@ export default function ActionBoxes() {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#035A95] block mb-1">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#6D28D9] block mb-1">
                     {box.subtitle}
                   </span>
-                  <h3 className="text-lg font-bold text-[#2A2A2A] group-hover:text-[#035A95] transition-colors mb-2.5">
+                  <h3 className="text-lg font-bold text-[#2A2A2A] group-hover:text-[#6D28D9] transition-colors mb-2.5">
                     {box.title}
                   </h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-normal">
@@ -77,7 +77,7 @@ export default function ActionBoxes() {
                 <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
                   <a
                     href={box.link}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#035A95] hover:text-[#B9D057] transition-colors uppercase tracking-wider"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6D28D9] hover:text-[#10B981] transition-colors uppercase tracking-wider"
                   >
                     <span>Read More</span>
                     <ArrowRight size={13} strokeWidth={2.5} />
