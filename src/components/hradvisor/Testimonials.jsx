@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function Testimonials() {
+  const { theme } = useTheme();
   const testimonials = [
     {
       id: 1,
@@ -111,18 +113,25 @@ export default function Testimonials() {
           {carouselItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="w-[380px] sm:w-[460px] lg:w-[500px] flex-shrink-0 bg-[#F9F7FC]/90 hover:bg-white rounded-xl py-4 px-5 sm:py-4.5 sm:px-6 flex flex-col justify-between border border-purple-100/80 hover:border-[#6D28D9]/30 hover:shadow-lg hover:shadow-purple-950/8 transition-all duration-300"
+              style={{ backgroundColor: theme.softTint }}
+              className="w-[380px] sm:w-[460px] lg:w-[500px] flex-shrink-0 hover:bg-white rounded-xl py-4 px-5 sm:py-4.5 sm:px-6 flex flex-col justify-between border border-slate-200/80 hover:shadow-lg transition-all duration-300"
             >
               <div>
                 {/* Top: Quote Icon + Category Tag */}
                 <div className="flex items-center justify-between mb-2">
-                  <div className="w-6 h-6 rounded-md bg-emerald-50 text-[#10B981] flex items-center justify-center flex-shrink-0">
+                  <div
+                    style={{ backgroundColor: `${theme.accent}1A`, color: theme.accent }}
+                    className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0"
+                  >
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
 
-                  <span className="text-[9.5px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white text-[#6D28D9] border border-purple-100/80 shadow-xs">
+                  <span
+                    style={{ color: theme.primary }}
+                    className="text-[9.5px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white border border-slate-200/80 shadow-xs"
+                  >
                     {item.tag}
                   </span>
                 </div>
@@ -134,12 +143,16 @@ export default function Testimonials() {
               </div>
 
               {/* Bottom: Role Only + Verified Partner Icon */}
-              <div className="pt-2.5 border-t border-purple-100/70 flex items-center justify-between">
+              <div className="pt-2.5 border-t border-slate-200/70 flex items-center justify-between">
                 <span className="text-[11px] sm:text-[11.5px] font-extrabold uppercase tracking-wide text-[#2D1B36]">
                   {item.role}
                 </span>
 
-                <div className="w-5 h-5 rounded-full bg-emerald-50 text-[#10B981] flex items-center justify-center flex-shrink-0" title="Verified Client">
+                <div
+                  style={{ backgroundColor: `${theme.accent}1A`, color: theme.accent }}
+                  className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                  title="Verified Client"
+                >
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>

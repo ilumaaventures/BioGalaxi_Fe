@@ -1,26 +1,40 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext';
 import biotechLabImg from '../../assets/biotech_lab_hd.jpg';
 
 export default function DarkCalloutBanner() {
+  const { theme } = useTheme();
+
   return (
     <section className="relative py-16 sm:py-18 lg:py-20 overflow-hidden text-white">
-      {/* Background Life Sciences Photographic Ultra-HD Image with Deep Royal Purple & Green Glow Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-[#1B062E]">
+      {/* Background Life Sciences Photographic Ultra-HD Image with Deep Dynamic Theme Overlay */}
+      <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: theme.primaryDeep }}>
         <img
           src={biotechLabImg}
           alt="Life sciences laboratory research innovation"
           className="w-full h-full object-cover object-center image-rendering-auto"
           loading="eager"
         />
-        {/* Crystal-clear royal purple & emerald luminous translucent color wash */}
-        <div className="absolute inset-0 bg-[#3B1366]/85 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1B062E]/90 via-[#260A3F]/70 to-[#047857]/40" />
+        {/* Dynamic theme translucent color wash */}
+        <div
+          className="absolute inset-0 mix-blend-multiply opacity-85"
+          style={{ backgroundColor: theme.primaryDark }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to right, ${theme.primaryDeep}E6, ${theme.primaryDark}B3, ${theme.accent}33)`
+          }}
+        />
       </div>
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
-        {/* Vivid Bio-Green Quotation Mark */}
-        <div className="text-[#10B981] text-[42px] sm:text-5xl lg:text-[54px] font-serif leading-none mb-3 select-none">
+        {/* Quotation Mark in Accent Color */}
+        <div
+          style={{ color: theme.accent }}
+          className="text-[42px] sm:text-5xl lg:text-[54px] font-serif leading-none mb-3 select-none"
+        >
           &rdquo;
         </div>
 
@@ -28,7 +42,7 @@ export default function DarkCalloutBanner() {
         <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-carnas leading-[1.2] tracking-normal mb-6 max-w-4xl">
           <span className="block">Focus on Your Science & Mission</span>
           <span className="block">
-            While <span className="text-[#10B981]">We Transform Your People Operations</span>
+            While <span style={{ color: theme.accent }}>We Transform Your People Operations</span>
           </span>
         </h2>
 

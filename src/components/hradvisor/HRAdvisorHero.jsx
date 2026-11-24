@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone } from 'lucide-react';
 import { FaLinkedinIn, FaYoutube, FaXTwitter } from 'react-icons/fa6';
+import { useTheme } from '../../context/ThemeContext';
 
 import heroLeadershipHd from '../../assets/hero_leadership_hd.jpg';
 import heroExecutiveHd from '../../assets/hero_executive_hd.jpg';
@@ -58,9 +59,8 @@ export default function HRAdvisorHero() {
 
   const slide = slides[currentSlide];
 
-  // Ultra-smooth eased gradient: White on Left Side (Logo), Purple on Right Side (Nav & Canvas)
-  const brandGradient =
-    'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 18%, #F9F7FC 19.5%, #EAE4F2 21%, #CDC0E1 22.5%, #AE94CE 24%, #8D6ABD 25.5%, #6E44AA 26.5%, #56289B 27.5%, #4C1D95 28.5%, #4C1D95 100%)';
+  const { theme, heroWhiteSide, heroBackground } = useTheme();
+  const isRightWhite = heroWhiteSide === 'right';
 
   return (
     <div
@@ -70,16 +70,16 @@ export default function HRAdvisorHero() {
       {/* ================= HEADER ================= */}
 
       <header
-        className="w-full relative z-30 border-b border-slate-100/60"
-        style={{ background: brandGradient }}
+        className="w-full relative z-30 border-b border-slate-100/60 transition-all duration-300"
+        style={{ background: heroBackground }}
       >
         <div className="w-full flex flex-col lg:flex-row items-stretch">
 
-          {/* Left Section: Logo on White */}
+          {/* Left Section: Logo */}
 
           <div className="w-full lg:w-[28%] px-6 sm:px-10 lg:pl-[5.8%] lg:pr-4 py-5 flex items-center justify-between">
 
-            {/* Bio Galaxi Official Brand Logo (Dark on White) */}
+            {/* Bio Galaxi Official Brand Logo (Dark on White, White on Dark) */}
 
             <a
               href="#home"
@@ -87,7 +87,7 @@ export default function HRAdvisorHero() {
               aria-label="Bio Galaxi Home"
             >
               <img
-                src={logoDark}
+                src={isRightWhite ? logoWhite : logoDark}
                 alt="Bio Galaxi - Integrated Talent Partner"
                 className="h-10 sm:h-11 w-auto max-h-[46px] object-contain transition-transform duration-200 group-hover:scale-[1.02]"
               />
@@ -95,7 +95,7 @@ export default function HRAdvisorHero() {
 
           </div>
 
-          {/* Right Section: Navigation Menu + Phone, Social & Search on Purple */}
+          {/* Right Section: Navigation Menu + Phone, Social & Search */}
 
           <div className="w-full lg:w-[72%] px-6 sm:px-8 lg:pr-[5.8%] lg:pl-6 py-4 lg:py-0 flex items-center justify-between lg:justify-end gap-6 xl:gap-8">
 
@@ -105,72 +105,73 @@ export default function HRAdvisorHero() {
 
               <a
                 href="#home"
-                className="text-[#10B981] transition-colors"
+                style={{ color: isRightWhite ? theme.primary : theme.accent }}
+                className="transition-colors font-extrabold"
               >
                 HOME
               </a>
 
               <a
                 href="#services"
-                className="text-white hover:text-[#10B981] transition-colors"
+                className={`${isRightWhite ? 'text-[#2D1B36] hover:text-[#555]' : 'text-white hover:opacity-90'} transition-opacity`}
               >
                 SOLUTIONS
               </a>
 
               <a
                 href="#about"
-                className="text-white hover:text-[#10B981] transition-colors"
+                className={`${isRightWhite ? 'text-[#2D1B36] hover:text-[#555]' : 'text-white hover:opacity-90'} transition-opacity`}
               >
                 ABOUT US
               </a>
 
               <a
                 href="#testimonials"
-                className="text-white hover:text-[#10B981] transition-colors"
+                className={`${isRightWhite ? 'text-[#2D1B36] hover:text-[#555]' : 'text-white hover:opacity-90'} transition-opacity`}
               >
                 IMPACT
               </a>
 
               <a
                 href="#contacts"
-                className="text-white hover:text-[#10B981] transition-colors"
+                className={`${isRightWhite ? 'text-[#2D1B36] hover:text-[#555]' : 'text-white hover:opacity-90'} transition-opacity`}
               >
                 CONTACT
               </a>
 
             </nav>
 
-            <span className="text-white/30 font-light hidden lg:inline">
+            <span className={`${isRightWhite ? 'text-slate-300' : 'text-white/30'} font-light hidden lg:inline`}>
               |
             </span>
 
             {/* Phone */}
 
             <div className="flex items-center gap-2">
-              <Phone size={13} className="text-[#10B981]" />
+              <Phone size={13} style={{ color: isRightWhite ? theme.primary : theme.accent }} />
 
               <a
                 href="tel:+910000000000"
-                className="font-bold text-white text-[12px] tracking-tight hover:text-[#10B981] transition-colors"
+                className={`font-bold ${isRightWhite ? 'text-[#2D1B36]' : 'text-white'} text-[12px] tracking-tight hover:opacity-80 transition-opacity`}
               >
                 +91 00000 00000
               </a>
             </div>
 
-            <span className="text-white/30 font-light hidden sm:inline">
+            <span className={`${isRightWhite ? 'text-slate-300' : 'text-white/30'} font-light hidden sm:inline`}>
               |
             </span>
 
             {/* Social Icons */}
 
-            <div className="flex items-center gap-3 text-white text-xs">
+            <div className={`flex items-center gap-3 ${isRightWhite ? 'text-[#2D1B36]' : 'text-white'} text-xs`}>
 
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="hover:text-[#10B981] transition-colors"
+                className="hover:opacity-75 transition-opacity"
               >
                 <FaLinkedinIn size={12} />
               </a>
@@ -180,7 +181,7 @@ export default function HRAdvisorHero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="X"
-                className="hover:text-[#10B981] transition-colors"
+                className="hover:opacity-75 transition-opacity"
               >
                 <FaXTwitter size={11} />
               </a>
@@ -190,7 +191,7 @@ export default function HRAdvisorHero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="YouTube"
-                className="hover:text-[#10B981] transition-colors"
+                className="hover:opacity-75 transition-opacity"
               >
                 <FaYoutube size={13} />
               </a>
@@ -205,11 +206,11 @@ export default function HRAdvisorHero() {
 
       <div className="w-full relative pb-10 sm:pb-12 lg:pb-16">
 
-        {/* Solid Purple Background + Narrow 15% White Transition */}
+        {/* Dynamic Hero Canvas Background (Gradient or Solid, Left or Right) */}
 
         <div
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          style={{ background: brandGradient }}
+          className="absolute inset-0 w-full h-full pointer-events-none transition-all duration-300"
+          style={{ background: heroBackground }}
         />
 
         {/* Main Slider Container */}
@@ -265,7 +266,10 @@ export default function HRAdvisorHero() {
 
                   {/* Eyebrow */}
 
-                  <span className="text-[12px] sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#6D28D9] mb-4">
+                  <span
+                    style={{ color: theme.primary }}
+                    className="text-[12px] sm:text-[13px] font-bold tracking-[0.2em] uppercase mb-4"
+                  >
                     {slide.tag}
                   </span>
 
@@ -287,11 +291,12 @@ export default function HRAdvisorHero() {
                     {slide.description}
                   </p>
 
-                  {/* Solid Purple CTA Button */}
+                  {/* Dynamic Themed CTA Button */}
 
                   <a
                     href={slide.buttonHref}
-                    className="inline-flex items-center justify-center px-9 py-3.5 bg-[#581C87] hover:bg-[#10B981] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md hover:shadow-lg active:scale-95 rounded-none"
+                    style={{ backgroundColor: theme.primary }}
+                    className="inline-flex items-center justify-center px-9 py-3.5 hover:brightness-110 text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] transition-all shadow-md hover:shadow-lg active:scale-95 rounded-none"
                   >
                     {slide.buttonText}
                   </a>
@@ -308,14 +313,15 @@ export default function HRAdvisorHero() {
 
           <div className="w-full pt-4 sm:pt-5 flex items-center justify-between">
 
-            {/* Previous / Next Arrows (Left side on White background: Dark Purple) */}
+            {/* Previous / Next Arrows */}
 
-            <div className="flex items-center gap-7 text-[#4C1D95]">
+            <div className="flex items-center gap-7">
 
               <button
                 type="button"
                 onClick={prevSlide}
-                className="text-[#4C1D95] hover:text-[#10B981] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
+                style={{ color: isRightWhite ? '#FFFFFF' : theme.primary }}
+                className="hover:opacity-80 transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
                 aria-label="Previous slide"
               >
                 <span className="text-2xl sm:text-3xl leading-none font-light group-hover:-translate-x-1 transition-transform">
@@ -326,7 +332,8 @@ export default function HRAdvisorHero() {
               <button
                 type="button"
                 onClick={nextSlide}
-                className="text-[#4C1D95] hover:text-[#10B981] transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
+                style={{ color: isRightWhite ? '#FFFFFF' : theme.primary }}
+                className="hover:opacity-80 transition-colors p-1 flex items-center group cursor-pointer focus:outline-none"
                 aria-label="Next slide"
               >
                 <span className="text-2xl sm:text-3xl leading-none font-light group-hover:translate-x-1 transition-transform">
@@ -336,7 +343,7 @@ export default function HRAdvisorHero() {
 
             </div>
 
-            {/* Slide Indicators (Right side on Purple background: Emerald & Translucent White) */}
+            {/* Slide Indicators */}
 
             <div className="flex items-center gap-2 pr-4 sm:pr-8">
 
@@ -345,10 +352,13 @@ export default function HRAdvisorHero() {
                   key={s.id}
                   type="button"
                   onClick={() => setCurrentSlide(idx)}
+                  style={currentSlide === idx ? { backgroundColor: theme.accent } : undefined}
                   className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer ${
                     currentSlide === idx
-                      ? 'w-6 bg-[#10B981]'
-                      : 'w-2 bg-white/40 hover:bg-white/70'
+                      ? 'w-6'
+                      : isRightWhite
+                        ? 'w-2 bg-slate-300 hover:bg-slate-500'
+                        : 'w-2 bg-white/40 hover:bg-white/70'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />

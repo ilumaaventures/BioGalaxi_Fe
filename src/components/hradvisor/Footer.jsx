@@ -1,11 +1,18 @@
 import React from 'react';
 import { Home, Mail, Smartphone } from 'lucide-react';
 import { FaLinkedinIn, FaYoutube, FaXTwitter, FaInstagram } from 'react-icons/fa6';
+import { useTheme } from '../../context/ThemeContext';
 import logoWhite from '../../assets/logo_biogalaxi_white.png';
 
 export default function Footer() {
+  const { theme } = useTheme();
+
   return (
-    <footer id="contacts" className="w-full bg-gradient-to-r from-[#240A3E] via-[#3B1366] to-[#581C87] text-white pt-16 sm:pt-20 pb-10">
+    <footer
+      id="contacts"
+      style={{ background: theme.footerGradient }}
+      className="w-full text-white pt-16 sm:pt-20 pb-10"
+    >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         
         {/* 4-Column Main Layout matching template */}
@@ -25,18 +32,18 @@ export default function Footer() {
 
             <ul className="space-y-3.5 text-xs text-white/85">
               <li className="flex items-start gap-3">
-                <Home size={15} className="text-[#10B981] flex-shrink-0 mt-0.5" />
+                <Home size={15} style={{ color: theme.accent }} className="flex-shrink-0 mt-0.5" />
                 <span>Life Sciences Innovation Corridor,<br />Tech Park, Suite 400</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={15} className="text-[#10B981] flex-shrink-0" />
-                <a href="mailto:info@biogalaxi.com" className="hover:text-[#10B981] transition-colors">
+                <Mail size={15} style={{ color: theme.accent }} className="flex-shrink-0" />
+                <a href="mailto:info@biogalaxi.com" className="hover:opacity-80 transition-opacity">
                   info@biogalaxi.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Smartphone size={15} className="text-[#10B981] flex-shrink-0" />
-                <a href="tel:+910000000000" className="hover:text-[#10B981] transition-colors">
+                <Smartphone size={15} style={{ color: theme.accent }} className="flex-shrink-0" />
+                <a href="tel:+910000000000" className="hover:opacity-80 transition-opacity">
                   +91 00000 00000
                 </a>
               </li>
@@ -103,26 +110,26 @@ export default function Footer() {
             </h5>
             <ul className="space-y-3 text-xs text-white/85">
               <li>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
-                  <FaLinkedinIn size={12} className="text-[#10B981]" />
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                  <FaLinkedinIn size={12} style={{ color: theme.accent }} />
                   <span>LinkedIn</span>
                 </a>
               </li>
               <li>
-                <a href="https://x.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
-                  <FaXTwitter size={12} className="text-[#10B981]" />
+                <a href="https://x.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                  <FaXTwitter size={12} style={{ color: theme.accent }} />
                   <span>Twitter / X</span>
                 </a>
               </li>
               <li>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
-                  <FaYoutube size={13} className="text-[#10B981]" />
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                  <FaYoutube size={13} style={{ color: theme.accent }} />
                   <span>YouTube</span>
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#10B981] transition-colors">
-                  <FaInstagram size={13} className="text-[#10B981]" />
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                  <FaInstagram size={13} style={{ color: theme.accent }} />
                   <span>Instagram</span>
                 </a>
               </li>
