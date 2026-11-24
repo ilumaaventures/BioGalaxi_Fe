@@ -4,7 +4,7 @@ import imgBiotechTeam from '../../assets/hradvisor/biotech_scientists_collab_hd.
 
 export default function HowWeAreDifferent() {
   return (
-    <section id="about" className="pt-16 pb-20 bg-white">
+    <section id="about" className="pt-20 sm:pt-24 lg:pt-28 pb-24 sm:pb-28 lg:pb-32 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
 
         {/* Top 2-Column Split: Title & Text */}

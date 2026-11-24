@@ -3,7 +3,7 @@ import biotechLabImg from '../../assets/biotech_lab_hd.jpg';
 
 export default function DarkCalloutBanner() {
   return (
-    <section className="relative py-24 sm:py-28 lg:py-32 overflow-hidden text-white">
+    <section className="relative py-16 sm:py-18 lg:py-20 overflow-hidden text-white">
       {/* Background Life Sciences Photographic Ultra-HD Image with Deep Royal Purple & Green Glow Overlay */}
       <div className="absolute inset-0 w-full h-full bg-[#1B062E]">
         <img
@@ -19,13 +19,13 @@ export default function DarkCalloutBanner() {
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
-        {/* Large Vivid Bio-Green Quotation Mark */}
-        <div className="text-[#10B981] text-6xl sm:text-7xl font-serif leading-none mb-3 select-none">
+        {/* Vivid Bio-Green Quotation Mark */}
+        <div className="text-[#10B981] text-[42px] sm:text-5xl lg:text-[54px] font-serif leading-none mb-3 select-none">
           &rdquo;
         </div>
 
         {/* Main Headline */}
-        <h2 className="text-3xl sm:text-5xl lg:text-[52px] font-carnas leading-[1.2] tracking-normal mb-8 max-w-4xl">
+        <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-carnas leading-[1.2] tracking-normal mb-6 max-w-4xl">
           <span className="block">Focus on Your Science & Mission</span>
           <span className="block">
             While <span className="text-[#10B981]">We Transform Your People Operations</span>

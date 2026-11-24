@@ -51,13 +51,13 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-white overflow-hidden py-10 lg:py-14"
+      className="relative w-full bg-white overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28"
     >
       {/* Soft Lavender Background Bleed
-          - On Desktop: Begins at 36px from section top
+          - On Desktop: Begins at 148px from section top (36px below inner photo)
           - Covers left edge of screen to 61% of viewport width
           - Ends 56px lower than photo bottom, forming the signature ledge under photo */}
-      <div className="absolute hidden lg:block left-0 top-[36px] w-[61%] h-[385px] bg-[#F8F6FD] z-0" />
+      <div className="absolute hidden lg:block left-0 top-[148px] w-[61%] h-[385px] bg-[#F8F6FD] z-0" />
 
       {/* Main Grid Container aligned with site width (1200px) */}
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
@@ -158,7 +158,7 @@ export default function Testimonials() {
               - Top: 0px (36px higher than light-blue background)
               - Height: 355px (ends 56px before light-blue background bottom)
               - Width: 54% (starts at left 46%, overlaps light-blue from 46% to 61%) */}
-          <div className="absolute -top-15 right-0 w-[53%] xl:w-[52%] h-[355px] overflow-hidden shadow-sm">
+          <div className="absolute top-0 right-0 w-[53%] xl:w-[52%] h-[355px] overflow-hidden shadow-sm">
             <img
               src={testimonialTeamHd}
               alt="Bio Galaxi life sciences research leadership and clinical team scaling"
