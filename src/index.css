@@ -131,3 +131,25 @@ html {
 .animate-pulse-slow {
   animation: pulseSlow 4s ease-in-out infinite;
 }
+
+/* Infinite Marquee - Right to Left with Pause on Hover */
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marqueeRightToLeft 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl:hover,
+.marquee-wrapper:hover .animate-marquee-rtl {
+  animation-play-state: paused !important;
+}

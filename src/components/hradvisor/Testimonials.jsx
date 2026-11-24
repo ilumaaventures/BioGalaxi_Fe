@@ -1,172 +1,152 @@
-import React, { useState, useEffect } from 'react';
-import testimonialTeamHd from '../../assets/hradvisor/testimonials_team_hd.jpg';
+import React, { useRef, useState, useEffect } from 'react';
 
 export default function Testimonials() {
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const [isFading, setIsFading] = useState(false);
-
   const testimonials = [
     {
       id: 1,
-      quote: 'Bio Galaxi is an integrated talent partner that truly transformed our people operations. Their combination of the TMS platform and Fractional CHRO leadership helped us scale our clinical teams with speed and compliance.',
-      author: 'DR. ARUN SHARMA',
-      role: 'Chief Scientific Officer, GeneTech Labs',
+      quote:
+        'Bio Galaxi transformed our people operations. Their combination of the TMS platform and Fractional CHRO leadership helped us scale clinical teams with speed and compliance.',
+      role: 'Chief Scientific Officer',
+      tag: 'Clinical Scaling & TMS',
     },
     {
       id: 2,
-      quote: 'Having technology, leadership advisory, and workforce execution under one roof saved our executive team months of friction. They understand the nuances of the life sciences industry like no other.',
-      author: 'ELIZABETH CHEN',
-      role: 'VP of Operations, BioTherapeutics Inc.',
+      quote:
+        'Having technology, leadership advisory, and workforce execution under one roof saved our executive team months of friction. They understand life sciences like no other.',
+      role: 'VP of Operations',
+      tag: 'Executive Leadership',
     },
     {
       id: 3,
-      quote: 'From executive staffing to employee welfare and rewards, Bio Galaxi provided our research organization with a complete talent partnership from strategy to daily execution.',
-      author: 'MARCUS VANCE',
-      role: 'Managing Director, PharmaInnovate',
+      quote:
+        'From executive staffing to employee welfare and rewards, Bio Galaxi provided our research organization with a complete talent partnership from strategy to daily execution.',
+      role: 'Managing Director',
+      tag: 'Talent Partnership',
     },
   ];
 
-  const changeSlide = (newIdx) => {
-    if (newIdx === currentIdx) return;
-    setIsFading(true);
-    setTimeout(() => {
-      setCurrentIdx(newIdx);
-      setIsFading(false);
-    }, 180);
+  // Repeat the 3 cards to allow continuous infinite loop scrolling
+  const carouselItems = [
+    ...testimonials,
+    ...testimonials,
+    ...testimonials,
+    ...testimonials,
+  ];
+
+  const containerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Auto-scroll loop from right to left
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let animId;
+    const scrollSpeed = 0.8; // Smooth gliding speed
+
+    const step = () => {
+      if (!isPaused && !isDragging) {
+        container.scrollLeft += scrollSpeed;
+        const halfWidth = container.scrollWidth / 2;
+        if (container.scrollLeft >= halfWidth) {
+          container.scrollLeft -= halfWidth;
+        }
+      }
+      animId = requestAnimationFrame(step);
+    };
+
+    animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
+  }, [isPaused, isDragging]);
+
+  // Click & Drag to scroll right or left with mouse
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setCurrentIdx((prev) => (prev + 1) % testimonials.length);
-        setIsFading(false);
-      }, 180);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
 
-  const current = testimonials[currentIdx];
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    setIsPaused(false);
+  };
 
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-white overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28"
+      className="relative w-full bg-white py-10 sm:py-12 lg:py-14 overflow-hidden"
     >
-      {/* Soft Lavender Background Bleed
-          - On Desktop: Begins at 148px from section top (36px below inner photo)
-          - Covers left edge of screen to 61% of viewport width
-          - Ends 56px lower than photo bottom, forming the signature ledge under photo */}
-      <div className="absolute hidden lg:block left-0 top-[148px] w-[61%] h-[385px] bg-[#F8F6FD] z-0" />
-
-      {/* Main Grid Container aligned with site width (1200px) */}
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
+      {/* Scrollable Container with Smooth Edge Fade */}
+      <div className="relative w-full overflow-hidden">
         
-        {/* Mobile View: Clean Stacked Layout */}
-        <div className="lg:hidden w-full bg-[#F8F6FD] overflow-hidden">
-          <div className="w-full h-[240px] sm:h-[300px]">
-            <img
-              src={testimonialTeamHd}
-              alt="Bio Galaxi life sciences research leadership and clinical team scaling"
-              className="w-full h-full object-cover object-center"
-              loading="eager"
-            />
-          </div>
-          <div className="p-7 sm:p-9">
-            <div className="text-[#10B981] text-4xl font-serif leading-none mb-3 select-none">
-              &ldquo;
-            </div>
-            <p className="text-[16px] sm:text-[17px] font-sans text-[#222222] font-normal leading-[1.45] mb-4">
-              {current.quote}
-            </p>
-            <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 mb-5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#6D28D9]">
-                {current.author}
-              </span>
-              <span className="text-[11px] text-[#666666]">
-                {current.role}
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => changeSlide(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    currentIdx === i ? 'w-5 bg-[#10B981]' : 'w-2 bg-slate-300'
-                  }`}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Left & Right Soft Fade Gradients */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-20" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
 
-        {/* Desktop View: Architectural Stepped Overlap */}
-        <div className="hidden lg:block relative w-full h-[410px]">
-          
-          {/* Left Column: Quote Content */}
-          <div className="w-[380px] xl:w-[410px] pt-14 pb-8 flex flex-col justify-between h-[375px]">
-            <div>
-              {/* Quotation Mark */}
-              <div className="text-[#10B981] text-4xl xl:text-5xl font-serif leading-none mb-3 select-none">
-                &ldquo;
+        {/* Interactive Track: Moves Right-to-Left, Draggable & Scrollable with Mouse */}
+        <div
+          ref={containerRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => {
+            setIsPaused(false);
+            setIsDragging(false);
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          className="flex gap-4 sm:gap-5 px-6 overflow-x-auto select-none cursor-grab active:cursor-grabbing [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-2"
+        >
+          {carouselItems.map((item, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              className="w-[380px] sm:w-[460px] lg:w-[500px] flex-shrink-0 bg-[#F9F7FC]/90 hover:bg-white rounded-xl py-4 px-5 sm:py-4.5 sm:px-6 flex flex-col justify-between border border-purple-100/80 hover:border-[#6D28D9]/30 hover:shadow-lg hover:shadow-purple-950/8 transition-all duration-300"
+            >
+              <div>
+                {/* Top: Quote Icon + Category Tag */}
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-6 h-6 rounded-md bg-emerald-50 text-[#10B981] flex items-center justify-center flex-shrink-0">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
+
+                  <span className="text-[9.5px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white text-[#6D28D9] border border-purple-100/80 shadow-xs">
+                    {item.tag}
+                  </span>
+                </div>
+
+                {/* Quote Text */}
+                <p className="text-[12px] sm:text-[12.5px] text-[#333333] font-normal leading-[1.58] mb-3">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
               </div>
 
-              {/* Reduced, Refined Font Size Quote */}
-              <p 
-                className={`text-[17px] xl:text-[18px] font-sans text-[#222222] font-normal leading-[1.46] mb-5 transition-opacity duration-200 ${
-                  isFading ? 'opacity-40' : 'opacity-100'
-                }`}
-              >
-                {current.quote}
-              </p>
+              {/* Bottom: Role Only + Verified Partner Icon */}
+              <div className="pt-2.5 border-t border-purple-100/70 flex items-center justify-between">
+                <span className="text-[11px] sm:text-[11.5px] font-extrabold uppercase tracking-wide text-[#2D1B36]">
+                  {item.role}
+                </span>
 
-              {/* Author & Role */}
-              <div 
-                className={`flex flex-wrap items-baseline gap-x-1.5 gap-y-1 transition-opacity duration-200 ${
-                  isFading ? 'opacity-40' : 'opacity-100'
-                }`}
-              >
-                <span className="text-[12px] font-bold uppercase tracking-[0.06em] text-[#6D28D9]">
-                  {current.author}
-                </span>
-                <span className="text-[12px] text-[#666666]">
-                  {current.role}
-                </span>
+                <div className="w-5 h-5 rounded-full bg-emerald-50 text-[#10B981] flex items-center justify-center flex-shrink-0" title="Verified Client">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
               </div>
             </div>
-
-            {/* Slider Dots */}
-            <div className="flex items-center gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => changeSlide(i)}
-                  className={`h-1.5 rounded-full cursor-pointer transition-all duration-300 ${
-                    currentIdx === i ? 'w-5 bg-[#10B981]' : 'w-2 bg-slate-300 hover:bg-slate-400'
-                  }`}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Photograph
-              - Top: 0px (36px higher than light-blue background)
-              - Height: 355px (ends 56px before light-blue background bottom)
-              - Width: 54% (starts at left 46%, overlaps light-blue from 46% to 61%) */}
-          <div className="absolute top-0 right-0 w-[53%] xl:w-[52%] h-[355px] overflow-hidden shadow-sm">
-            <img
-              src={testimonialTeamHd}
-              alt="Bio Galaxi life sciences research leadership and clinical team scaling"
-              className="w-full h-full object-cover object-center"
-              loading="eager"
-            />
-          </div>
-
+          ))}
         </div>
 
       </div>

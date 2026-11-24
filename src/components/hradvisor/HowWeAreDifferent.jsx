@@ -4,7 +4,7 @@ import imgBiotechTeam from '../../assets/hradvisor/biotech_scientists_collab_hd.
 
 export default function HowWeAreDifferent() {
   return (
-    <section id="about" className="pt-20 sm:pt-24 lg:pt-28 pb-24 sm:pb-28 lg:pb-32 bg-white">
+    <section id="about" className="pt-6 sm:pt-8 lg:pt-10 pb-20 sm:pb-24 lg:pb-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
 
         {/* Top 2-Column Split: Title & Text */}
@@ -37,8 +37,8 @@ export default function HowWeAreDifferent() {
         {/* Bottom Graphic */}
         <div className="relative w-full bg-white">
 
-          {/* Professional Team Image - Moved Slightly Up */}
-          <div className="w-full bg-white flex justify-end overflow-hidden lg:-translate-y-4">
+          {/* Professional Team Image */}
+          <div className="w-full bg-white flex justify-end overflow-hidden">
             <img
               src={imgBiotechTeam}
               alt="Life sciences and biotechnology talent specialists collaborating in modern laboratory"
@@ -47,8 +47,8 @@ export default function HowWeAreDifferent() {
             />
           </div>
 
-          {/* Purple & Green Accent Callout Box - Moved Slightly Down */}
-          <div className="relative lg:absolute lg:bottom-[-20px] lg:left-0 w-full lg:w-[46%] bg-gradient-to-br from-[#2E1065] to-[#4C1D95] p-8 sm:p-12 text-white z-10 shadow-xl shadow-purple-950/20 mt-4 lg:mt-0">
+          {/* Purple & Green Accent Callout Box - Vertically Centered on Image */}
+          <div className="relative lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-0 w-full lg:w-[46%] bg-gradient-to-br from-[#2E1065] to-[#4C1D95] p-8 sm:p-12 text-white z-10 shadow-xl shadow-purple-950/20 mt-4 lg:mt-0">
             <p className="text-xl sm:text-2xl lg:text-[25px] font-carnas leading-[1.38] text-white mb-6">
               The simplest way to explain Bio Galaxi: we are an integrated talent partner that helps businesses manage their entire people function through technology, leadership and workforce solutions.
             </p>

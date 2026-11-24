@@ -119,7 +119,7 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section id="services" className="pt-12 sm:pt-14 lg:pt-16 pb-12 sm:pb-14 lg:pb-16 bg-white">
+    <section id="services" className="pt-12 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 lg:pb-10 bg-white">
       <div className="max-w-[1140px] mx-auto px-6 lg:px-8">
         
         {/* Top 2-Column Split: Title & Text */}
